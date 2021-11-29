@@ -1,13 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Metal", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(57, 62, 70);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.box-shadow1 {
+  box-shadow: rgba(28, 255, 225, 0.644) 0px 1.5px;
+  background-color: #262e3af1;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #00adb5;
+}
+.header {
+  padding: 10px;
+}
+.logo-main {
+  font-family: "Barrio", cursive;
+}
+.content {
+  min-height: 88vh;
 }
