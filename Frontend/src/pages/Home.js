@@ -15,15 +15,17 @@ function Home() {
   return (
     <DefaultLayout>
       {loading == true && <Spinner />}
-      <Row justify="center" gutter={16} className="mt-5">
+      <Row justify="center" gutter={[24, 16]} className="mt-5">
         {cars.map((car) => {
           return (
-            <Col lg={5} sm={24} xs={24}>
+            <Col xl={5} lg={5} md={8} sm={12} xs={24}>
               <div className="car p-2 box-shadow2 mt-3">
-                <img src={car.image} alt={car.name} className="carimg" />
+                <div>
+                  <img src={car.image} alt={car.name} className="carimg" />
+                </div>
                 <div className="car-content d-flex align-items-center justify-content-between">
                   <div>
-                    <p>{car.name}</p>
+                    <p style={{ fontWeight: "bold" }}>{car.name}</p>
                     <p>{car.rentPerHour} Rent Per Hour /-</p>
                   </div>
                   <div>
