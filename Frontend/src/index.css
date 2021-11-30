@@ -5,7 +5,7 @@ body {
   font-family: "Metal", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(57, 62, 70);
+  background-color: #222f35;
 }
 
 code {
@@ -14,13 +14,23 @@ code {
 }
 .box-shadow1 {
   box-shadow: rgba(28, 255, 225, 0.644) 0px 1.5px;
-  background-color: #232933;
+  background-color: #2f2e2e;
+}
+.box-shadow2 {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 h1 {
   font-size: 30px;
   font-weight: bold;
-  color: #00adb5;
+  color: #00ffffdf;
+}
+p {
+  margin: 5px !important;
+  text-align: left;
+  padding: 0;
 }
 .header {
   padding: 12px;
@@ -30,4 +40,15 @@ h1 {
 }
 .content {
   min-height: 88vh;
+}
+.carimg {
+  height: 180px;
+  width: auto;
+  border-radius: 5px;
+}
+.btn1 {
+  box-shadow: none !important;
+  background-color: white;
+  color: orangered;
+  border: 1px solid orangered !important;
 }
