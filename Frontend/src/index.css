@@ -12,6 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.Spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
 .box-shadow1 {
   box-shadow: rgba(28, 255, 225, 0.644) 0px 1.5px;
   background-color: #2f2e2e;
