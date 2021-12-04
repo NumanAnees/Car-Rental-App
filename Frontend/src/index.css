@@ -55,8 +55,8 @@ p {
 .btn1 {
   box-shadow: none !important;
   background-color: white;
-  color: orangered;
-  border: 1px solid orangered !important;
+  color: #1eb5a4;
+  border: 1px solid #959595 !important;
   height: 35px;
 }
 .car {
@@ -68,4 +68,47 @@ p {
   max-width: 272px;
   min-width: 272px;
   background-color: #24ffffc9;
+}
+/* -------------------login------------------ */
+
+.login {
+  padding-top: 50px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+.login label {
+  color: rgb(236, 236, 236) !important;
+  font-weight: 500;
+}
+.login-form {
+  background-color: #0d8585;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 5px;
+}
+.login-form input {
+  background-color: #e2d5d5 !important;
+  border: none !important;
+  color: white;
+  min-width: 20rem !important;
+  height: 40px;
+}
+.login-heading {
+  color: rgb(255, 245, 245) !important;
+}
+
+.login a {
+  color: white !important;
+  opacity: 0.8;
+}
+.btn2 {
+  box-shadow: none !important;
+  background-color: white;
+  color: #31bea7;
+  border: 1px solid #959595 !important;
+  height: 2rem;
+  padding: 5px 16px;
+  font-weight: 500;
 }

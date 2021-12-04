@@ -26,7 +26,7 @@ function Home() {
                 <div className="car-content d-flex align-items-center justify-content-between">
                   <div>
                     <p style={{ fontWeight: "bold" }}>{car.name}</p>
-                    <p>{car.rentPerHour} Rent Per Hour /-</p>
+                    <p>${car.rentPerHour} Per Hour /-</p>
                   </div>
                   <div>
                     <button className="btn1 mr-2">Book Now</button>
