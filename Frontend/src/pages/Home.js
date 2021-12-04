@@ -25,8 +25,12 @@ function Home() {
                 </div>
                 <div className="car-content d-flex align-items-center justify-content-between">
                   <div>
-                    <p style={{ fontWeight: "bold" }}>{car.name}</p>
-                    <p>${car.rentPerHour} Per Hour /-</p>
+                    <p style={{ fontWeight: "bold", color: "#222f35 " }}>
+                      {car.name}
+                    </p>
+                    <p style={{ color: "#222f35" }}>
+                      ${car.rentPerHour} Per Hour /-
+                    </p>
                   </div>
                   <div>
                     <button className="btn1 mr-2">Book Now</button>

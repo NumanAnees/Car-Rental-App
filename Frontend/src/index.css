@@ -42,6 +42,18 @@ p {
 .header {
   padding: 12px;
 }
+.header .ant-btn {
+  box-shadow: none !important;
+  background-color: rgb(255, 255, 255) !important;
+  color: #1eb5a4 !important;
+  border: 1px solid #00ffffdf !important;
+  padding: 5px 15px !important;
+  outline: none !important;
+  font-family: "Courier New", Courier, monospace !important;
+  margin-right: 2rem;
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
 .logo-main {
   font-family: "Barrio";
 }
