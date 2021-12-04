@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #222f35 !important;
+  overflow-x: hidden !important;
 }
 
 code {
@@ -92,7 +93,7 @@ p {
 .login-form input {
   background-color: #e2d5d5 !important;
   border: none !important;
-  color: white;
+  color: rgb(26, 26, 26);
   min-width: 20rem !important;
   height: 40px;
 }
