@@ -58,6 +58,7 @@ p {
   color: #1eb5a4;
   border: 1px solid #959595 !important;
   height: 35px;
+  outline: none !important;
 }
 .car {
   border-radius: 5px;
@@ -111,4 +112,9 @@ p {
   height: 2rem;
   padding: 5px 16px;
   font-weight: 500;
+  outline: none !important;
+}
+.btn1:focus,
+.btn2:focus {
+  border: none;
 }
