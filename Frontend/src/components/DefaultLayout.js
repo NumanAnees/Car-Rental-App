@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, Dropdown, Button, Space } from "antd";
 import Logoo from "../pages/logo.png";
-
+import { Link } from "react-router-dom";
 function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
   const menu = (
@@ -29,41 +29,42 @@ function DefaultLayout(props) {
     <div>
       <div className="header box-shadow1">
         <div className="d-flex justify-content-between logo-main">
-          <div
-            style={{
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-            }}
-          >
+          <Link to="/">
             <div
               style={{
-                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
               }}
             >
-              {" "}
-              <img
-                src={Logoo}
-                alt="car"
+              <div
                 style={{
-                  width: "35px",
-                  height: "35px",
-                  marginLeft: "16px",
-                  marginTop: "5px",
-                  color: "black",
-                }}
-              />
-              <h1
-                style={{
-                  fontSize: "1.4rem",
-                  marginLeft: "10px",
-                  marginTop: "10px",
+                  display: "flex",
                 }}
               >
-                Sandhu Cars
-              </h1>
+                <img
+                  src={Logoo}
+                  alt="car"
+                  style={{
+                    width: "35px",
+                    height: "35px",
+                    marginLeft: "16px",
+                    marginTop: "5px",
+                    color: "black",
+                  }}
+                />
+                <h1
+                  style={{
+                    fontSize: "1.4rem",
+                    marginLeft: "10px",
+                    marginTop: "10px",
+                  }}
+                >
+                  Sandhu Cars
+                </h1>
+              </div>
             </div>
-          </div>
+          </Link>
           <Dropdown overlay={menu} placement="bottomCenter">
             <Button>{"Wellcome " + user.username}</Button>
           </Dropdown>

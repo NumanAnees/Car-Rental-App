@@ -26,7 +26,16 @@ function App() {
             {" "}
           </Route>
           <Route
-            path="/booking/:carId"
+            path="/booking"
+            exact
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/booking/:id"
             exact
             element={
               <ProtectedRoute>
