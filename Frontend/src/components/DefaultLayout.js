@@ -65,7 +65,7 @@ function DefaultLayout(props) {
             </div>
           </div>
           <Dropdown overlay={menu} placement="bottomCenter">
-            <Button>{user.username}</Button>
+            <Button>{"Wellcome " + user.username}</Button>
           </Dropdown>
           {/* <button>user</button> */}
         </div>
