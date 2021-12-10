@@ -20,26 +20,28 @@ function Home() {
         {cars.map((car) => {
           return (
             <Col xl={5} lg={5} md={8} sm={12} xs={24}>
-              <div className="car p-2 box-shadow2 mt-3">
-                <div>
-                  <img src={car.image} alt={car.name} className="carimg" />
-                </div>
-                <div className="car-content d-flex align-items-center justify-content-between">
+              <Link to={`/booking/${car._id}`}>
+                <div className="car p-2 box-shadow2 mt-3">
                   <div>
-                    <p style={{ fontWeight: "bold", color: "#222f35 " }}>
-                      {car.name}
-                    </p>
-                    <p style={{ color: "#222f35" }}>
-                      ${car.rentPerHour} Per Hour /-
-                    </p>
+                    <img src={car.image} alt={car.name} className="carimg" />
                   </div>
-                  <div>
-                    <button className="btn1 mr-2">
-                      <Link to={`/booking/${car._id}`}> Book Now</Link>
-                    </button>
+                  <div className="car-content d-flex align-items-center justify-content-between">
+                    <div>
+                      <p style={{ fontWeight: "bold", color: "#222f35 " }}>
+                        {car.name}
+                      </p>
+                      <p style={{ color: "#222f35" }}>
+                        ${car.rentPerHour} Per Hour /-
+                      </p>
+                    </div>
+                    <div>
+                      <button className="btn1 mr-2">
+                        <Link to={`/booking/${car._id}`}> Book Now</Link>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </Col>
           );
         })}

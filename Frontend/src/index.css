@@ -23,11 +23,10 @@ code {
   box-shadow: rgba(28, 255, 225, 0.644) 0px 1.5px;
   background-color: #2f2e2e !important;
 }
-/* .box-shadow2 {
+.bs2 {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  background-color: #24ffffd7;
-} */
+}
 
 h1 {
   font-size: 30px;
@@ -83,7 +82,7 @@ p {
   min-width: 272px;
   background-color: #24ffffc9;
 }
-/* -------------------login------------------ */
+/* ------------------------------------login/Register-------------------------------------- */
 
 .login {
   padding-top: 50px;
@@ -130,4 +129,10 @@ p {
 .btn1:focus,
 .btn2:focus {
   border: none;
+}
+/* --------------------------------------Booking page------------------------------------- */
+.carimg2 {
+  height: 400px;
+  border-radius: 10px;
+  width: auto;
 }
