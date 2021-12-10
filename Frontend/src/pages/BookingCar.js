@@ -31,16 +31,61 @@ function BookingCar() {
         <Col lg={10} sm={24} xs={24}>
           <img src={car.image} alt={car.name} className="carimg2 bs2" />
         </Col>
-        <Col lg={10} sm={24} xs={24}>
-          <Divider type="horizontal" dashed>
-            Car Info
-          </Divider>
-          <div style={{ textAlign: "right" }}>
-            <p>{car.name}</p>
-            <p>{console.log(cars)}</p>
-            <p>{car.rentPerHour} Rs Per hour /-</p>
-            <p>Fuel Type : {car.fuelType}</p>
-            <p>Max Persons : {car.capacity}</p>
+        <Col
+          lg={10}
+          sm={24}
+          xs={24}
+          style={{ marginLeft: "65px", bottom: "10px" }}
+        >
+          <div
+            style={{
+              // backgroundColor: "#24ffffc9",
+              backgroundColor: "rgb(245, 245, 245)",
+              borderRadius: "10px",
+              maxHeight: "400px",
+            }}
+          >
+            <Divider>
+              <h4 style={{ color: "white" }}>DETAILS</h4>
+            </Divider>
+            <div
+              style={{
+                display: "flex",
+                marginLeft: "0.5px",
+                marginRight: "0.5px",
+              }}
+            >
+              <div style={{ margin: "4px" }} className="car-headings">
+                <p>
+                  <span className="car-data">Model</span>
+                </p>
+                <p>
+                  <span className="car-data">
+                    <i class="fas fa-money-bill-wave"></i>Rent
+                  </span>
+                </p>
+                <p>
+                  <span className="car-data">Fuel Type</span>
+                </p>
+                <p>
+                  <span className="car-data">Max Persons</span>
+                </p>
+              </div>
+              <div className="car-headData">
+                <p>
+                  <span className="car-data2">{car.name}</span>
+                </p>
+                <p>
+                  <span className="car-data2">{car.rentPerHour} Rs/-</span>
+                </p>
+                <p>
+                  <span className="car-data2">{car.fuelType}</span>
+                </p>
+                <p>
+                  <span className="car-data2">{car.capacity}</span>
+                </p>
+              </div>
+            </div>
           </div>
         </Col>
       </Row>
