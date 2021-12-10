@@ -19,6 +19,7 @@ function BookingCar() {
       setcar(cars.find((o) => o._id == id));
     }
   }, [cars]);
+
   return (
     <DefaultLayout>
       {loading && <Spinner />}
@@ -34,6 +35,13 @@ function BookingCar() {
           <Divider type="horizontal" dashed>
             Car Info
           </Divider>
+          <div style={{ textAlign: "right" }}>
+            <p>{car.name}</p>
+            <p>{console.log(cars)}</p>
+            <p>{car.rentPerHour} Rs Per hour /-</p>
+            <p>Fuel Type : {car.fuelType}</p>
+            <p>Max Persons : {car.capacity}</p>
+          </div>
         </Col>
       </Row>
     </DefaultLayout>

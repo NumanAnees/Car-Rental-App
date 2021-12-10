@@ -9,6 +9,8 @@ app.get("/", (req, res) => {
   res.send("hello");
 });
 app.use("/api/cars/", require("./Routes/carsRoutes"));
+//refresh error
+app.use("/booking/api/cars/", require("./Routes/carsRoutes"));
 app.use("/api/users/", require("./Routes/usersRoutes"));
 
 app.listen(port, () => {
