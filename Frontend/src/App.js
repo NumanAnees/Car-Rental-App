@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import BookingCar from "./pages/BookingCar";
+import "../node_modules/font-awesome/css/font-awesome.min.css";
 
 function App() {
   return (

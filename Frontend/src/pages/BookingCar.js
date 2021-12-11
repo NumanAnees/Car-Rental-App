@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Divider } from "antd";
+import { DollarCircleFilled } from "@ant-design/icons";
 import DefaultLayout from "../components/DefaultLayout";
 import { getAllCars } from "../redux/actions/carsAction";
 import { useSelector, useDispatch } from "react-redux";
@@ -61,7 +62,8 @@ function BookingCar() {
                 </p>
                 <p>
                   <span className="car-data">
-                    <i class="fas fa-money-bill-wave"></i>Rent
+                    {/* <DollarCircleFilled /> */}
+                    Rent
                   </span>
                 </p>
                 <p>
