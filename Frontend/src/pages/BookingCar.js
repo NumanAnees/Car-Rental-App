@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Divider } from "antd";
+import { Row, Col, Divider, DatePicker } from "antd";
 import { DollarCircleFilled } from "@ant-design/icons";
 import DefaultLayout from "../components/DefaultLayout";
 import { getAllCars } from "../redux/actions/carsAction";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import Spinner from "../components/Spinner";
+import moment from "moment";
+const { RangePicker } = DatePicker;
 
 function BookingCar() {
   const { id } = useParams();
@@ -13,6 +15,9 @@ function BookingCar() {
   const { loading } = useSelector((state) => state.alertsReducer);
   const [car, setcar] = useState({});
   const dispatch = useDispatch();
+  const [from, setFrom] = useState();
+  const [to, setTo] = useState();
+  const [totalHours, setTotalHours] = useState(0);
   useEffect(() => {
     if (cars.length == 0) {
       dispatch(getAllCars());
@@ -20,7 +25,15 @@ function BookingCar() {
       setcar(cars.find((o) => o._id == id));
     }
   }, [cars]);
-
+  function selectTimeSlots(values) {
+    if (values) {
+      setFrom(moment(values[0]).format("MMM DD yyyy HH:mm"));
+      setTo(moment(values[1]).format("MMM DD yyyy HH:mm"));
+      setTotalHours(values[1].diff(values[0], "hours"));
+    } else {
+      setTotalHours(0);
+    }
+  }
   return (
     <DefaultLayout>
       {loading && <Spinner />}
@@ -41,9 +54,10 @@ function BookingCar() {
           <div
             style={{
               // backgroundColor: "#24ffffc9",
-              backgroundColor: "rgb(245, 245, 245)",
+              backgroundColor: "#28d8d8",
               borderRadius: "10px",
               maxHeight: "400px",
+              width: "90%",
             }}
           >
             <Divider>
@@ -86,6 +100,21 @@ function BookingCar() {
                 <p>
                   <span className="car-data2">{car.capacity}</span>
                 </p>
+              </div>
+            </div>
+            <Divider>
+              <h4 style={{ color: "white" }}>SELECT TIME SLOTS</h4>
+            </Divider>
+            <div>
+              <RangePicker
+                className="RangePicker"
+                showTime={{ format: "HH:mm" }}
+                format="MMM DD yyyy HH:mm"
+                onChange={selectTimeSlots}
+              />
+
+              <div>
+                <p>{totalHours}</p>
               </div>
             </div>
           </div>

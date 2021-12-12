@@ -137,7 +137,7 @@ p {
   width: auto;
 }
 .car-headings {
-  margin-left: 7rem !important;
+  margin-left: 6.8rem !important;
 }
 .car-data {
   max-width: 120.69px !important;
@@ -145,15 +145,16 @@ p {
   width: 120.69px !important;
   font-size: 20px;
   background-color: #28d8d8;
-  padding: 1.5px 5px;
-  border-radius: 5px;
+  padding: 3px 9px;
+  border-radius: 15px;
   color: white;
 }
 .car-headData {
   font-size: 20px;
   padding: 1.5px 5px;
-  margin-left: 4.5rem;
-  color: #28d8d8;
+  margin-left: 3rem;
+  /* color: #14b9b9; */
+  color: white;
 }
 .car-data2 {
   /* border-bottom: 1.8px solid #0eb9b9; */
@@ -165,7 +166,7 @@ p {
   position: relative;
   top: 50%;
   width: 50%;
-  border-top: 1px solid #00000073 !important;
+  border-top: 1px solid white !important;
   /* border-top-color: inherit; */
   border-bottom: 0;
   transform: translateY(50%);
@@ -173,7 +174,15 @@ p {
 }
 .ant-divider-inner-text h4 {
   margin-top: 4px;
-  background-color: #28d8d8;
+  background-color: rgba(0, 0, 0, 0.397);
   padding: 1.5px 5px;
   border-radius: 5px;
 }
+.ant-picker-range {
+  padding: 12px !important;
+  background-color: lightseagreen !important;
+  color: white !important;
+  border: 1px solid white;
+}
+
+/* ---------------------------------------------------------------------------------- */
