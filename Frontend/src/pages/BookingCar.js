@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Divider, DatePicker } from "antd";
+import { Row, Col, Divider, DatePicker, Checkbox } from "antd";
 import { DollarCircleFilled } from "@ant-design/icons";
 import DefaultLayout from "../components/DefaultLayout";
 import { getAllCars } from "../redux/actions/carsAction";
@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import moment from "moment";
+import { bookCar } from "../redux/actions/bookingActions";
 const { RangePicker } = DatePicker;
 
 function BookingCar() {
@@ -18,6 +19,9 @@ function BookingCar() {
   const [from, setFrom] = useState();
   const [to, setTo] = useState();
   const [totalHours, setTotalHours] = useState(0);
+  const [driver, setdriver] = useState(false);
+  const [totalAmount, setTotalAmount] = useState(0);
+  const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     if (cars.length == 0) {
       dispatch(getAllCars());
@@ -25,6 +29,12 @@ function BookingCar() {
       setcar(cars.find((o) => o._id == id));
     }
   }, [cars]);
+  useEffect(() => {
+    setTotalAmount(totalHours * car.rentPerHour);
+    if (driver) {
+      setTotalAmount(totalAmount + 300 * totalHours);
+    }
+  }, [driver, totalHours]);
   function selectTimeSlots(values) {
     if (values) {
       setFrom(moment(values[0]).format("MMM DD yyyy HH:mm"));
@@ -33,6 +43,21 @@ function BookingCar() {
     } else {
       setTotalHours(0);
     }
+  }
+  function bookNow() {
+    const reqObj = {
+      user: JSON.parse(localStorage.getItem("user"))._id,
+      car: id,
+      totalHours,
+      totalAmount,
+      driverRequired: driver,
+      bookedTimeSlots: {
+        from,
+        to,
+      },
+    };
+
+    dispatch(bookCar(reqObj));
   }
   return (
     <DefaultLayout>
@@ -56,7 +81,7 @@ function BookingCar() {
               // backgroundColor: "#24ffffc9",
               backgroundColor: "#28d8d8",
               borderRadius: "10px",
-              maxHeight: "400px",
+              // maxHeight: "400px",
               width: "90%",
             }}
           >
@@ -113,8 +138,38 @@ function BookingCar() {
                 onChange={selectTimeSlots}
               />
 
-              <div>
-                <p>{totalHours}</p>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "end",
+                  marginRight: "56px",
+                  color: "white",
+                }}
+              >
+                <p>
+                  Total Hours : <b>{totalHours}</b>
+                </p>
+                <p>
+                  Rent Per Hour : <b>{car.rentPerHour}</b>
+                </p>
+                <Checkbox
+                  onChange={(e) => {
+                    if (e.target.checked) {
+                      setdriver(true);
+                    } else {
+                      setdriver(false);
+                    }
+                  }}
+                >
+                  <span style={{ color: "white" }}> Driver Required</span>
+                </Checkbox>
+                <h3 style={{ color: "white" }}>Total Amount : {totalAmount}</h3>{" "}
+                <div className="stripe">
+                  <button className="btn1" onClick={bookNow}>
+                    Book Now
+                  </button>
+                </div>
               </div>
             </div>
           </div>
