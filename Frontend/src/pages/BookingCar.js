@@ -96,6 +96,8 @@ function BookingCar() {
             <div
               style={{
                 display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 marginLeft: "0.5px",
                 marginRight: "0.5px",
               }}
@@ -104,10 +106,11 @@ function BookingCar() {
                 <p style={{ display: "flex", flexDirection: "row" }}>
                   <span
                     style={{
-                      marginTop: "0px",
+                      marginTop: "-4px",
                       fontSize: "20px",
                       color: "white",
                       marginLeft: "4px !important",
+                      marginRight: "5px",
                     }}
                   >
                     <TagsOutlined />
@@ -117,10 +120,11 @@ function BookingCar() {
                 <p style={{ display: "flex", flexDirection: "row" }}>
                   <span
                     style={{
-                      marginTop: "0px",
+                      marginTop: "-4px",
                       fontSize: "20px",
                       color: "white",
                       marginLeft: "4px !important",
+                      marginRight: "5px",
                     }}
                   >
                     <DollarCircleOutlined />
@@ -130,10 +134,11 @@ function BookingCar() {
                 <p style={{ display: "flex", flexDirection: "row" }}>
                   <span
                     style={{
-                      marginTop: "0px",
+                      marginTop: "-4px",
                       fontSize: "20px",
                       color: "white",
                       marginLeft: "4px !important",
+                      marginRight: "5px",
                     }}
                   >
                     <CarOutlined />
@@ -143,10 +148,11 @@ function BookingCar() {
                 <p style={{ display: "flex", flexDirection: "row" }}>
                   <span
                     style={{
-                      marginTop: "0px",
+                      marginTop: "-4px",
                       fontSize: "20px",
                       color: "white",
                       marginLeft: "4px !important",
+                      marginRight: "5px",
                     }}
                   >
                     <UsergroupAddOutlined />

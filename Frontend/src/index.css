@@ -137,15 +137,15 @@ p {
   width: auto;
 }
 .car-headings {
-  margin-left: 6.8rem !important;
+  /* margin-left: 6.8rem !important; */
 }
 .car-data {
   max-width: 120.69px !important;
   min-width: 120.69px !important;
   width: 120.69px !important;
   font-size: 20px;
-  background-color: #28d8d8;
-  padding: 4px 4px;
+  /* background-color: #28d8d8; */
+  /* padding: 3px 4px; */
   border-radius: 15px;
   color: white;
 }
@@ -155,6 +155,8 @@ p {
   margin-left: 3rem;
   /* color: #14b9b9; */
   color: white;
+  /* margin: 12px 2px; */
+  margin-top: 3px !important;
 }
 .car-data2 {
   /* border-bottom: 1.8px solid #0eb9b9; */
