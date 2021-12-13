@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Divider, DatePicker, Checkbox } from "antd";
-import { DollarCircleFilled } from "@ant-design/icons";
+import {
+  DollarCircleOutlined,
+  TagsOutlined,
+  CarOutlined,
+  UsergroupAddOutlined,
+} from "@ant-design/icons";
 import DefaultLayout from "../components/DefaultLayout";
 import { getAllCars } from "../redux/actions/carsAction";
 import { useSelector, useDispatch } from "react-redux";
@@ -96,19 +101,56 @@ function BookingCar() {
               }}
             >
               <div style={{ margin: "4px" }} className="car-headings">
-                <p>
+                <p style={{ display: "flex", flexDirection: "row" }}>
+                  <span
+                    style={{
+                      marginTop: "0px",
+                      fontSize: "20px",
+                      color: "white",
+                      marginLeft: "4px !important",
+                    }}
+                  >
+                    <TagsOutlined />
+                  </span>
                   <span className="car-data">Model</span>
                 </p>
-                <p>
-                  <span className="car-data">
-                    {/* <DollarCircleFilled /> */}
-                    Rent
+                <p style={{ display: "flex", flexDirection: "row" }}>
+                  <span
+                    style={{
+                      marginTop: "0px",
+                      fontSize: "20px",
+                      color: "white",
+                      marginLeft: "4px !important",
+                    }}
+                  >
+                    <DollarCircleOutlined />
                   </span>
+                  <span className="car-data">Rent</span>
                 </p>
-                <p>
+                <p style={{ display: "flex", flexDirection: "row" }}>
+                  <span
+                    style={{
+                      marginTop: "0px",
+                      fontSize: "20px",
+                      color: "white",
+                      marginLeft: "4px !important",
+                    }}
+                  >
+                    <CarOutlined />
+                  </span>
                   <span className="car-data">Fuel Type</span>
                 </p>
-                <p>
+                <p style={{ display: "flex", flexDirection: "row" }}>
+                  <span
+                    style={{
+                      marginTop: "0px",
+                      fontSize: "20px",
+                      color: "white",
+                      marginLeft: "4px !important",
+                    }}
+                  >
+                    <UsergroupAddOutlined />
+                  </span>
                   <span className="car-data">Max Persons</span>
                 </p>
               </div>
