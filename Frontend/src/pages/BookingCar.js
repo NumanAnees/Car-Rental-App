@@ -18,7 +18,7 @@ function BookingCar() {
   const dispatch = useDispatch();
   const [from, setFrom] = useState();
   const [to, setTo] = useState();
-  const [totalHours, setTotalHours] = useState(0);
+  const [totalMins, setTotalmins] = useState(0);
   const [driver, setdriver] = useState(false);
   const [totalAmount, setTotalAmount] = useState(0);
   const [showModal, setShowModal] = useState(false);
@@ -30,25 +30,25 @@ function BookingCar() {
     }
   }, [cars]);
   useEffect(() => {
-    setTotalAmount(totalHours * car.rentPerHour);
+    setTotalAmount(totalMins * Math.ceil(car.rentPerHour / 60));
     if (driver) {
-      setTotalAmount(totalAmount + 300 * totalHours);
+      setTotalAmount(totalAmount + 5 * totalMins);
     }
-  }, [driver, totalHours]);
+  }, [driver, totalMins]);
   function selectTimeSlots(values) {
     if (values) {
-      setFrom(moment(values[0]).format("MMM DD yyyy HH:mm"));
-      setTo(moment(values[1]).format("MMM DD yyyy HH:mm"));
-      setTotalHours(values[1].diff(values[0], "hours"));
+      setFrom(moment(values[0]).format("MMM DD yyyy HH"));
+      setTo(moment(values[1]).format("MMM DD yyyy HH"));
+      setTotalmins(values[1].diff(values[0], "minutes"));
     } else {
-      setTotalHours(0);
+      setTotalmins(0);
     }
   }
   function bookNow() {
     const reqObj = {
       user: JSON.parse(localStorage.getItem("user"))._id,
       car: id,
-      totalHours,
+      totalMins,
       totalAmount,
       driverRequired: driver,
       bookedTimeSlots: {
@@ -133,7 +133,7 @@ function BookingCar() {
             <div>
               <RangePicker
                 className="RangePicker"
-                showTime={{ format: "HH:mm" }}
+                showTime={{ format: "HH:mm a" }}
                 format="MMM DD yyyy HH:mm"
                 onChange={selectTimeSlots}
               />
@@ -148,10 +148,10 @@ function BookingCar() {
                 }}
               >
                 <p>
-                  Total Hours : <b>{totalHours}</b>
+                  Total Minutes : <b>{totalMins}</b>
                 </p>
                 <p>
-                  Rent Per Hour : <b>{car.rentPerHour}</b>
+                  Rent Per Minute : <b>{Math.ceil(car.rentPerHour / 60)}</b>
                 </p>
                 <Checkbox
                   onChange={(e) => {
@@ -164,9 +164,19 @@ function BookingCar() {
                 >
                   <span style={{ color: "white" }}> Driver Required</span>
                 </Checkbox>
-                <h3 style={{ color: "white" }}>Total Amount : {totalAmount}</h3>{" "}
+                <h3 style={{ color: "white" }}>Total Amount : {totalAmount}</h3>
                 <div className="stripe">
-                  <button className="btn1" onClick={bookNow}>
+                  <button
+                    className="btn1"
+                    style={{
+                      marginBottom: "4px",
+                      borderRadius: "5px",
+                      fontWeight: "500",
+                      outline: "none",
+                      border: "none",
+                    }}
+                    onClick={bookNow}
+                  >
                     Book Now
                   </button>
                 </div>
