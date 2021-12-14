@@ -198,9 +198,9 @@ function BookingCar() {
                 <p>
                   Total Minutes : <b>{totalMins}</b>
                 </p>
-                <p>
+                {/* <p>
                   Rent Per Minute : <b>{Math.ceil(car.rentPerHour / 60)}</b>
-                </p>
+                </p> */}
                 <Checkbox
                   onChange={(e) => {
                     if (e.target.checked) {
