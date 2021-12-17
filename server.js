@@ -12,7 +12,7 @@ app.use("/api/cars/", require("./Routes/carsRoutes"));
 //refresh error
 app.use("/booking/api/cars/", require("./Routes/carsRoutes"));
 app.use("/api/users/", require("./Routes/usersRoutes"));
-app.use("/api/bookings/", require("./Routes/bookingsRoute"));
+app.use("/booking/api/bookings/", require("./Routes/bookingsRoute"));
 
 app.listen(port, () => {
   console.log(`Server is running at port: ${port} `);

@@ -6,6 +6,7 @@ router.post("/bookcar", async (req, res) => {
   try {
     const newbooking = new Booking(req.body);
     await newbooking.save();
+    res.send("Booking successfull");
   } catch (err) {
     return res.status(400).json(err);
   }
