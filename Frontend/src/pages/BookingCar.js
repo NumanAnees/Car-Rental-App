@@ -185,50 +185,53 @@ function BookingCar() {
                 format="MMM DD yyyy HH:mm"
                 onChange={selectTimeSlots}
               />
-
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "end",
-                  marginRight: "56px",
-                  color: "white",
-                }}
-              >
-                <p>
-                  Total Minutes : <b>{totalMins}</b>
-                </p>
-                {/* <p>
-                  Rent Per Minute : <b>{Math.ceil(car.rentPerHour / 60)}</b>
-                </p> */}
-                <Checkbox
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setdriver(true);
-                    } else {
-                      setdriver(false);
-                    }
+              {from && to && (
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "end",
+                    marginRight: "56px",
+                    color: "white",
                   }}
                 >
-                  <span style={{ color: "white" }}> Driver Required</span>
-                </Checkbox>
-                <h3 style={{ color: "white" }}>Total Amount : {totalAmount}</h3>
-                <div className="stripe">
-                  <button
-                    className="btn1"
-                    style={{
-                      marginBottom: "4px",
-                      borderRadius: "5px",
-                      fontWeight: "500",
-                      outline: "none",
-                      border: "none",
+                  <p>
+                    Total Minutes : <b>{totalMins}</b>
+                  </p>
+                  {/* <p>
+                  Rent Per Minute : <b>{Math.ceil(car.rentPerHour / 60)}</b>
+                </p> */}
+                  <Checkbox
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setdriver(true);
+                      } else {
+                        setdriver(false);
+                      }
                     }}
-                    onClick={bookNow}
                   >
-                    Book Now
-                  </button>
+                    <span style={{ color: "white" }}> Driver Required</span>
+                  </Checkbox>
+                  <h3 style={{ color: "white" }}>
+                    Total Amount : {totalAmount}
+                  </h3>
+                  <div className="stripe">
+                    <button
+                      className="btn1"
+                      style={{
+                        marginBottom: "4px",
+                        borderRadius: "5px",
+                        fontWeight: "500",
+                        outline: "none",
+                        border: "none",
+                      }}
+                      onClick={bookNow}
+                    >
+                      Book Now
+                    </button>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </Col>

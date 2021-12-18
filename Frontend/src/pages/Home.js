@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import DefaultLayout from "../components/DefaultLayout";
 import { getAllCars } from "../redux/actions/carsAction";
@@ -10,10 +10,15 @@ const { RangePicker } = DatePicker;
 function Home() {
   const { cars } = useSelector((state) => state.carsReducer);
   const { loading } = useSelector((state) => state.alertsReducer);
+  const [totalCars, setTotalcars] = useState([]);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllCars());
   }, []);
+  useEffect(() => {
+    setTotalcars(cars);
+  }, [cars]);
+  function setFilter(values) {}
   return (
     <DefaultLayout>
       <Row className="mt-3" justify="center">
@@ -22,13 +27,13 @@ function Home() {
             className="RangePicker"
             showTime={{ format: "HH:mm a" }}
             format="MMM DD yyyy HH:mm"
-            //onChange={selectTimeSlots}
+            onChange={setFilter}
           />
         </Col>
       </Row>
       {loading == true && <Spinner />}
       <Row justify="center" gutter={[24, 16]}>
-        {cars.map((car) => {
+        {totalCars.map((car) => {
           return (
             <Col xl={5} lg={5} md={8} sm={12} xs={24}>
               <Link to={`/booking/${car._id}`}>
