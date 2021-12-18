@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import DefaultLayout from "../components/DefaultLayout";
 import { getAllCars } from "../redux/actions/carsAction";
-import { Button, Row, Col } from "antd";
+import { Row, Col, Divider, DatePicker, Checkbox } from "antd";
 import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
+const { RangePicker } = DatePicker;
 
 function Home() {
   const { cars } = useSelector((state) => state.carsReducer);
@@ -15,8 +16,18 @@ function Home() {
   }, []);
   return (
     <DefaultLayout>
+      <Row className="mt-3" justify="center">
+        <Col lg={20} sm={24} className="d-flex justify-content-left">
+          <RangePicker
+            className="RangePicker"
+            showTime={{ format: "HH:mm a" }}
+            format="MMM DD yyyy HH:mm"
+            //onChange={selectTimeSlots}
+          />
+        </Col>
+      </Row>
       {loading == true && <Spinner />}
-      <Row justify="center" gutter={[24, 16]} className="mt-5">
+      <Row justify="center" gutter={[24, 16]}>
         {cars.map((car) => {
           return (
             <Col xl={5} lg={5} md={8} sm={12} xs={24}>
