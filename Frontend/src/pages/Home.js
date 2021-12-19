@@ -5,6 +5,8 @@ import { getAllCars } from "../redux/actions/carsAction";
 import { Row, Col, Divider, DatePicker, Checkbox } from "antd";
 import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
+import moment from "moment";
+
 const { RangePicker } = DatePicker;
 
 function Home() {
@@ -18,7 +20,32 @@ function Home() {
   useEffect(() => {
     setTotalcars(cars);
   }, [cars]);
-  function setFilter(values) {}
+  function setFilter(values) {
+    var selectedFrom = moment(values[0], "MMM DD yyyy HH:mm");
+    var selectedTo = moment(values[1], "MMM DD yyyy HH:mm");
+
+    var temp = [];
+
+    for (var car of cars) {
+      if (car.bookedTimeSlots.length == 0) {
+        temp.push(car);
+      } else {
+        for (var booking of car.bookedTimeSlots) {
+          if (
+            selectedFrom.isBetween(booking.from, booking.to) ||
+            selectedTo.isBetween(booking.from, booking.to) ||
+            moment(booking.from).isBetween(selectedFrom, selectedTo) ||
+            moment(booking.to).isBetween(selectedFrom, selectedTo)
+          ) {
+          } else {
+            temp.push(car);
+          }
+        }
+      }
+    }
+
+    setTotalcars(temp);
+  }
   return (
     <DefaultLayout>
       <Row className="mt-3" justify="center">
