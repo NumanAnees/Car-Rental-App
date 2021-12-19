@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Divider, DatePicker, Checkbox } from "antd";
+import { Row, Col, Divider, DatePicker, Checkbox, Modal } from "antd";
 import {
   DollarCircleOutlined,
   TagsOutlined,
@@ -185,6 +185,21 @@ function BookingCar() {
                 format="MMM DD yyyy HH:mm"
                 onChange={selectTimeSlots}
               />
+              <br />
+              <button
+                className="btn1 mt-2 mb-2"
+                style={{
+                  marginBottom: "4px",
+                  borderRadius: "5px",
+                  outline: "none",
+                  border: "none",
+                }}
+                onClick={() => {
+                  setShowModal(true);
+                }}
+              >
+                See Booked Slots
+              </button>
               {from && to && (
                 <div
                   style={{
@@ -235,6 +250,35 @@ function BookingCar() {
             </div>
           </div>
         </Col>
+        {car.name && (
+          <Modal
+            visible={showModal}
+            closable={false}
+            footer={false}
+            title="Booked time slots"
+          >
+            <div className="p-2">
+              {car.bookedTimeSlots.map((slot) => {
+                return (
+                  <button className="btn1 mt-2 ml-2">
+                    {slot.from} - {slot.to}
+                  </button>
+                );
+              })}
+
+              <div className="text-right mt-5">
+                <button
+                  className="btn1"
+                  onClick={() => {
+                    setShowModal(false);
+                  }}
+                >
+                  CLOSE
+                </button>
+              </div>
+            </div>
+          </Modal>
+        )}
       </Row>
     </DefaultLayout>
   );
