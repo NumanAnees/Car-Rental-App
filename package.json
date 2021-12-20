@@ -20,6 +20,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^6.0.13",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "stripe": "^8.194.0",
+    "uuid": "^8.3.2"
   }
 }
