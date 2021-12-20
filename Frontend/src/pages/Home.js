@@ -6,7 +6,6 @@ import { Row, Col, Divider, DatePicker, Checkbox } from "antd";
 import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import moment from "moment";
-
 const { RangePicker } = DatePicker;
 
 function Home() {

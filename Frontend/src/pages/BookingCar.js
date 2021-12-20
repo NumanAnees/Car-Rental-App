@@ -6,6 +6,7 @@ import {
   CarOutlined,
   UsergroupAddOutlined,
 } from "@ant-design/icons";
+import StripeCheckout from "react-stripe-checkout";
 import DefaultLayout from "../components/DefaultLayout";
 import { getAllCars } from "../redux/actions/carsAction";
 import { useSelector, useDispatch } from "react-redux";
@@ -49,8 +50,9 @@ function BookingCar() {
       setTotalmins(0);
     }
   }
-  function bookNow() {
+  function onToken(token) {
     const reqObj = {
+      token,
       user: JSON.parse(localStorage.getItem("user"))._id,
       car: id,
       totalMins,
@@ -230,7 +232,13 @@ function BookingCar() {
                   <h3 style={{ color: "white" }}>
                     Total Amount : {totalAmount}
                   </h3>
-                  <div className="stripe">
+                  <StripeCheckout
+                    token={onToken}
+                    shippingAddress
+                    currency="pkr"
+                    amount={totalAmount * 100}
+                    stripeKey="pk_test_51K8lJeSGkXsHpk6s64EtVo37lQmikIps217LhE2fmpwRMj2Ro0iKQvYXcFkMBHjjM4Z6BC5uvxV8XsTbKQFfbQ5y000eSg9RUb"
+                  >
                     <button
                       className="btn1"
                       style={{
@@ -240,11 +248,10 @@ function BookingCar() {
                         outline: "none",
                         border: "none",
                       }}
-                      onClick={bookNow}
                     >
                       Book Now
                     </button>
-                  </div>
+                  </StripeCheckout>
                 </div>
               )}
             </div>

@@ -190,5 +190,7 @@ p {
 .ant-picker-input > input {
   color: white !important;
 }
-
+.ant-modal-title {
+  color: #1eb5a4 !important;
+}
 /* ---------------------------------------------------------------------------------- */
