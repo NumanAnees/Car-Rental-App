@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import BookingCar from "./pages/BookingCar";
+import UserBooking from "./pages/UserBooking";
 
 function App() {
   return (
@@ -40,6 +41,24 @@ function App() {
             element={
               <ProtectedRoute>
                 <BookingCar />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/userbookings"
+            exact
+            element={
+              <ProtectedRoute>
+                <UserBooking />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/userbookings/:id"
+            exact
+            element={
+              <ProtectedRoute>
+                <UserBooking />
               </ProtectedRoute>
             }
           ></Route>
