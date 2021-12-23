@@ -14,6 +14,7 @@ import { useParams } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import moment from "moment";
 import { bookCar } from "../redux/actions/bookingActions";
+import Footer from "./Footer";
 const { RangePicker } = DatePicker;
 
 function BookingCar() {
@@ -287,6 +288,7 @@ function BookingCar() {
           </Modal>
         )}
       </Row>
+      <Footer />
     </DefaultLayout>
   );
 }

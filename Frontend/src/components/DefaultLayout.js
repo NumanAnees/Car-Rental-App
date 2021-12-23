@@ -7,13 +7,13 @@ function DefaultLayout(props) {
   const menu = (
     <Menu>
       <Menu.Item>
-        <a href="https://www.antgroup.com">Home</a>
+        <a href="#">Home</a>
       </Menu.Item>
       <Menu.Item>
-        <a href="https://www.antgroup.com">Bookings</a>
+        <a href="#">Bookings</a>
       </Menu.Item>
       <Menu.Item>
-        <a href="https://www.aliyun.com">Profile</a>
+        <a href="#">Profile</a>
       </Menu.Item>
       <Menu.Item
         onClick={() => {

@@ -6,6 +6,8 @@ import { Row, Col, Divider, DatePicker, Checkbox } from "antd";
 import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import moment from "moment";
+import Footer from "./Footer";
+
 const { RangePicker } = DatePicker;
 
 function Home() {
@@ -20,29 +22,65 @@ function Home() {
     setTotalcars(cars);
   }, [cars]);
   function setFilter(values) {
-    var selectedFrom = moment(values[0], "MMM DD yyyy HH:mm");
-    var selectedTo = moment(values[1], "MMM DD yyyy HH:mm");
+    if (values) {
+      if (values.length > 1) {
+        // var selectedFrom = moment(values[0], "MMM DD yyyy HH:mm");
+        // var selectedTo = moment(values[1], "MMM DD yyyy HH:mm");
 
-    var temp = [];
+        var selectedFrom = moment(new Date(values[0]._d)).format(
+          "MMM DD yyyy HH:mm"
+        );
+        var selectedTo = moment(new Date(values[1]._d)).format(
+          "MMM DD yyyy HH:mm"
+        );
+        var temp = [];
 
-    for (var car of cars) {
-      if (car.bookedTimeSlots.length == 0) {
-        temp.push(car);
-      } else {
-        for (var booking of car.bookedTimeSlots) {
-          if (
-            selectedFrom.isBetween(booking.from, booking.to) ||
-            selectedTo.isBetween(booking.from, booking.to) ||
-            moment(booking.from).isBetween(selectedFrom, selectedTo) ||
-            moment(booking.to).isBetween(selectedFrom, selectedTo)
-          ) {
-          } else {
+        for (var car of cars) {
+          if (car.bookedTimeSlots.length == 0) {
             temp.push(car);
+          } else {
+            for (var booking of car.bookedTimeSlots) {
+              if (
+                moment(values[0]._d).isBetween(
+                  booking.from,
+                  booking.to,
+                  undefined,
+                  "[]"
+                ) ||
+                moment(values[1]._d).isBetween(
+                  booking.from,
+                  booking.to,
+                  undefined,
+                  "[]"
+                ) ||
+                moment(booking.from).isBetween(
+                  selectedFrom,
+                  selectedTo,
+                  undefined,
+                  "[]"
+                ) ||
+                moment(booking.to).isBetween(
+                  selectedFrom,
+                  selectedTo,
+                  undefined,
+                  "[]"
+                )
+              ) {
+                console.log("nomi");
+              } else {
+                temp.push(car);
+                // return;
+              }
+            }
           }
         }
+      } else {
+        var temp = cars;
       }
+    } else {
+      var temp = cars;
     }
-
+    var temp = [...new Set(temp)];
     setTotalcars(temp);
   }
   return (
@@ -73,7 +111,7 @@ function Home() {
                         {car.name}
                       </p>
                       <p style={{ color: "#222f35" }}>
-                        ${car.rentPerHour} Per Hour /-
+                        Rs{car.rentPerHour} Per Hour /-
                       </p>
                     </div>
                     <div>
@@ -88,6 +126,7 @@ function Home() {
           );
         })}
       </Row>
+      <Footer />
     </DefaultLayout>
   );
 }

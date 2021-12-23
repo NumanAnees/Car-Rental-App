@@ -21,6 +21,7 @@ router.post("/bookcar", async (req, res) => {
         currency: "pkr",
         customer: customer.id,
         receipt_email: token.email,
+        description: "Software development services",
       },
       {
         idempotencyKey: uuidv4(),
