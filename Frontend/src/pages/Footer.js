@@ -49,7 +49,9 @@ const Footer = () => {
                         style={{ height: "80px", width: "80px" }}
                         alt="logo"
                       />
-                      <h3 style={{ color: "#00ffffdf" }}>Sandhu Cars</h3>
+                      <h3 style={{ color: "#00ffffdf", fontFamily: "Barrio" }}>
+                        Sandhu Cars
+                      </h3>
                     </a>
                   </div>
                   <div className="footer-text">
