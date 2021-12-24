@@ -29,57 +29,115 @@ function UserBookings() {
 
       <Row justify="center" gutter={16}>
         <Col lg={16} sm={24} style={{ color: "black" }}>
-          {bookings
-            .filter((o) => o.user == user._id)
-            .map((booking) => {
-              return (
-                <Row
-                  gutter={16}
-                  className="Userbooking bs1 mt-2 mb-2 text-left"
-                  style={{ backgroundColor: "#1eb5a4", borderRadius: "5px" }}
-                >
-                  <Col lg={6} sm={24}>
-                    <p>
-                      <b>{booking.car.name}</b>
-                    </p>
-                    <p>
-                      Total hours : <b>{booking.totalHours}</b>
-                    </p>
-                    <p>
-                      Rent per hour : <b>{booking.car.rentPerHour}</b>
-                    </p>
-                    <p>
-                      Total amount : <b>{booking.totalAmount}</b>
-                    </p>
-                  </Col>
+          {user.role
+            ? bookings.map((booking) => {
+                return (
+                  <Row
+                    gutter={16}
+                    className="Userbooking bs1 mt-2 mb-2 text-left"
+                    style={{
+                      backgroundColor: "#1eb5a4",
+                      borderRadius: "5px",
+                    }}
+                  >
+                    <Col lg={6} sm={24}>
+                      <p>
+                        <b>{booking.car.name}</b>
+                      </p>
+                      <p>
+                        Total hours : <b>{booking.totalHours}</b>
+                      </p>
+                      <p>
+                        Rent per hour : <b>{booking.car.rentPerHour}</b>
+                      </p>
+                      <p>
+                        Total amount : <b>{booking.totalAmount}</b>
+                      </p>
+                    </Col>
 
-                  <Col lg={12} sm={24}>
-                    <p>
-                      Transaction Id : <b>{booking.transactionId}</b>
-                    </p>
-                    <p>
-                      From: <b>{booking.bookedTimeSlots.from}</b>
-                    </p>
-                    <p>
-                      To: <b>{booking.bookedTimeSlots.to}</b>
-                    </p>
-                    <p>
-                      Date of booking:{" "}
-                      <b>{moment(booking.createdAt).format("MMM DD yyyy")}</b>
-                    </p>
-                  </Col>
+                    <Col lg={12} sm={24}>
+                      <p>
+                        Transaction Id : <b>{booking.transactionId}</b>
+                      </p>
+                      <p>
+                        From: <b>{booking.bookedTimeSlots.from}</b>
+                      </p>
+                      <p>
+                        To: <b>{booking.bookedTimeSlots.to}</b>
+                      </p>
+                      <p>
+                        Date of booking:{" "}
+                        <b>{moment(booking.createdAt).format("MMM DD yyyy")}</b>
+                      </p>
+                    </Col>
 
-                  <Col lg={6} sm={24} className="text-right">
-                    <img
-                      style={{ borderRadius: 5 }}
-                      src={booking.car.image}
-                      height="140"
-                      className="p-2"
-                    />
-                  </Col>
-                </Row>
-              );
-            })}
+                    <Col lg={6} sm={24} className="text-right">
+                      <img
+                        style={{ borderRadius: 5 }}
+                        src={booking.car.image}
+                        height="140"
+                        className="p-2"
+                      />
+                    </Col>
+                  </Row>
+                );
+              })
+            : bookings
+                .filter((o) => o.user == user._id)
+                .map((booking) => {
+                  return (
+                    <Row
+                      gutter={16}
+                      className="Userbooking bs1 mt-2 mb-2 text-left"
+                      style={{
+                        backgroundColor: "#1eb5a4",
+                        borderRadius: "5px",
+                      }}
+                    >
+                      <Col lg={6} sm={24}>
+                        <p>
+                          <b>{booking.car.name}</b>
+                        </p>
+                        <p>
+                          Total hours : <b>{booking.totalHours}</b>
+                        </p>
+                        <p>
+                          Rent per hour : <b>{booking.car.rentPerHour}</b>
+                        </p>
+                        <p>
+                          Total amount : <b>{booking.totalAmount}</b>
+                        </p>
+                      </Col>
+
+                      <Col lg={12} sm={24}>
+                        <p>
+                          Transaction Id : <b>{booking.transactionId}</b>
+                        </p>
+                        <p>
+                          From: <b>{booking.bookedTimeSlots.from}</b>
+                        </p>
+                        <p>
+                          To: <b>{booking.bookedTimeSlots.to}</b>
+                        </p>
+                        <p>
+                          Date of booking:{" "}
+                          <b>
+                            {moment(booking.createdAt).format("MMM DD yyyy")}
+                          </b>
+                        </p>
+                      </Col>
+
+                      <Col lg={6} sm={24} className="text-right">
+                        <img
+                          style={{ borderRadius: 5 }}
+                          src={booking.car.image}
+                          height="140"
+                          className="p-2"
+                        />
+                      </Col>
+                    </Row>
+                  );
+                })}
         </Col>
       </Row>
     </DefaultLayout>

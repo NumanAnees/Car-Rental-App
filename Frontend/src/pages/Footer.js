@@ -1,4 +1,5 @@
 import React from "react";
+import img from "./logo.png";
 
 const Footer = () => {
   return (
@@ -41,12 +42,14 @@ const Footer = () => {
               <div className="col-xl-4 col-lg-4 mb-50">
                 <div className="footer-widget">
                   <div className="footer-logo">
-                    <a href="index.html">
+                    <a href="#">
                       <img
-                        src="https://i.ibb.co/QDy827D/ak-logo.png"
+                        src={img}
                         className="img-fluid"
+                        style={{ height: "80px", width: "80px" }}
                         alt="logo"
                       />
+                      <h3 style={{ color: "#00ffffdf" }}>Sandhu Cars</h3>
                     </a>
                   </div>
                   <div className="footer-text">
@@ -139,8 +142,8 @@ const Footer = () => {
               <div className="col-xl-6 col-lg-6 text-center text-lg-left">
                 <div className="copyright-text">
                   <p>
-                    Copyright &copy; 2018, All Right Reserved{" "}
-                    <a href="https://codepen.io/anupkumar92/">Anup</a>
+                    Copyright &copy; 2018, All Right Reserved by
+                    <a href="#"> Sandhu</a>
                   </p>
                 </div>
               </div>
