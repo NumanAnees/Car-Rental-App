@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import BookingCar from "./pages/BookingCar";
 import UserBooking from "./pages/UserBooking";
+import AddCar from "./pages/AddCar";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
               </ProtectedRoute>
             }
           ></Route>
+
           <Route
             path="/booking/:id"
             exact
@@ -59,6 +61,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <UserBooking />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/addcar"
+            exact
+            element={
+              <ProtectedRoute>
+                <AddCar />
               </ProtectedRoute>
             }
           ></Route>

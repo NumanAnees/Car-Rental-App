@@ -26,10 +26,9 @@ function UserBookings() {
       >
         All Bookings
       </h3>
-      <input type="text" value={user.username} />
 
       <Row justify="center" gutter={16}>
-        <Col lg={16} sm={24} style={{ color: "black" }}>
+        <Col lg={16} sm={24} style={{ color: "darkslategray" }}>
           {user.role
             ? bookings.map((booking) => {
                 return (
@@ -37,7 +36,7 @@ function UserBookings() {
                     gutter={16}
                     className="Userbooking bs1 mt-2 mb-2 text-left"
                     style={{
-                      backgroundColor: "#1eb5a4",
+                      backgroundColor: "#00ffffdf",
                       borderRadius: "5px",
                     }}
                   >
@@ -91,7 +90,7 @@ function UserBookings() {
                       gutter={16}
                       className="Userbooking bs1 mt-2 mb-2 text-left"
                       style={{
-                        backgroundColor: "#1eb5a4",
+                        backgroundColor: "#00ffffdf",
                         borderRadius: "5px",
                       }}
                     >
