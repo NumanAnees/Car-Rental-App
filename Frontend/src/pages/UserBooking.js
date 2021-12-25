@@ -26,6 +26,7 @@ function UserBookings() {
       >
         All Bookings
       </h3>
+      <input type="text" value={user.username} />
 
       <Row justify="center" gutter={16}>
         <Col lg={16} sm={24} style={{ color: "black" }}>
