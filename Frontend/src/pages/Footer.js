@@ -1,5 +1,14 @@
 import React from "react";
 import img from "./logo.png";
+import {
+  PushpinOutlined,
+  PhoneOutlined,
+  MailOutlined,
+  HomeOutlined,
+  FacebookFilled,
+  TwitterSquareFilled,
+  LinkedinFilled,
+} from "@ant-design/icons";
 
 const Footer = () => {
   return (
@@ -10,28 +19,30 @@ const Footer = () => {
             <div className="row">
               <div className="col-xl-4 col-md-4 mb-30">
                 <div className="single-cta">
-                  <i className="fas fa-map-marker-alt"></i>
+                  <PushpinOutlined className="f-icons" />
                   <div className="cta-text">
                     <h4>Find us</h4>
-                    <span>1010 Avenue, sw 54321, chandigarh</span>
+                    <span>
+                      Shop Number 12, Rehman plaza, wahdat road Lahore
+                    </span>
                   </div>
                 </div>
               </div>
               <div className="col-xl-4 col-md-4 mb-30">
+                <PhoneOutlined className="f-icons" />
                 <div className="single-cta">
-                  <i className="fas fa-phone"></i>
                   <div className="cta-text">
                     <h4>Call us</h4>
-                    <span>9876543210 0</span>
+                    <span>+923310145083</span>
                   </div>
                 </div>
               </div>
               <div className="col-xl-4 col-md-4 mb-30">
+                <MailOutlined className="f-icons" />
                 <div className="single-cta">
-                  <i className="far fa-envelope-open"></i>
                   <div className="cta-text">
                     <h4>Mail us</h4>
-                    <span>mail@info.com</span>
+                    <span>sandhu@gmail.com</span>
                   </div>
                 </div>
               </div>
@@ -63,15 +74,25 @@ const Footer = () => {
                   </div>
                   <div className="footer-social-icon">
                     <span>Follow us</span>
-                    <a href="#">
-                      <i className="fab fa-facebook-f facebook-bg"></i>
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-twitter twitter-bg"></i>
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-google-plus-g google-bg"></i>
-                    </a>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginLeft: "9px",
+                      }}
+                    >
+                      <a href="#">
+                        <FacebookFilled className="f-social-icons facebook " />
+                      </a>
+                      <a href="#">
+                        <TwitterSquareFilled className="f-social-icons twitter" />
+                      </a>
+                      <a href="#">
+                        <LinkedinFilled className="f-social-icons linkedIn" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -129,7 +150,9 @@ const Footer = () => {
                     <form action="#">
                       <input type="text" placeholder="Email Address" />
                       <button>
-                        <i className="fab fa-telegram-plane"></i>
+                        <HomeOutlined
+                          style={{ color: "white", fontSize: "18px" }}
+                        />
                       </button>
                     </form>
                   </div>

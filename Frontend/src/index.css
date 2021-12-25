@@ -359,4 +359,27 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+.f-icons {
+  font-size: 38px;
+  color: #00ffffdf !important;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+.f-social-icons {
+  font-size: 32px !important;
+  margin-top: -13px;
+  border-radius: 5px;
+}
+.facebook {
+  color: #3b5998 !important;
+  background-color: white;
+}
+.twitter {
+  color: #00acee !important;
+  background-color: white;
+}
+.linkedIn {
+  color: #db4a39 !important;
+  background-color: white;
+}
 /* -------------------------------------Booking--------------------------------- */

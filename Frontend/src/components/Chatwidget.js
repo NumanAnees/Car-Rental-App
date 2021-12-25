@@ -69,6 +69,10 @@ const Chatwidget = () => {
       );
     } else if (newMessage.includes("hacker")) {
       addResponseMessage(`Hahaha, Nice joke 😄`);
+    } else if (newMessage.includes("haha")) {
+      addResponseMessage(`Hahaha, Nice joke 😄`);
+    } else if (newMessage.includes("hehe")) {
+      addResponseMessage(`Hehehe, Nice joke 😄`);
     } else if (newMessage.includes("bye")) {
       addResponseMessage(`Bye 😄`);
     } else {
