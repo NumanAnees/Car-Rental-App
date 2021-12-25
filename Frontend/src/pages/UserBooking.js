@@ -10,6 +10,7 @@ function UserBookings() {
   const { bookings } = useSelector((state) => state.bookingsReducer);
   const { loading } = useSelector((state) => state.alertsReducer);
   const user = JSON.parse(localStorage.getItem("user"));
+
   useEffect(() => {
     dispatch(getAllBookings());
   }, []);
@@ -26,10 +27,9 @@ function UserBookings() {
       >
         All Bookings
       </h3>
-
       <Row justify="center" gutter={16}>
         <Col lg={16} sm={24} style={{ color: "darkslategray" }}>
-          {user.role
+          {user.admin
             ? bookings.map((booking) => {
                 return (
                   <Row
