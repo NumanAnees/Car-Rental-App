@@ -11,6 +11,7 @@ app.get("/", (req, res) => {
 app.use("/api/cars/", require("./Routes/carsRoutes"));
 //refresh error
 app.use("/booking/api/cars/", require("./Routes/carsRoutes"));
+app.use("/editcar/api/cars/", require("./Routes/carsRoutes"));
 app.use("/api/users/", require("./Routes/usersRoutes"));
 app.use("/booking/api/bookings/", require("./Routes/bookingsRoute"));
 app.use("/api/bookings/", require("./Routes/bookingsRoute"));

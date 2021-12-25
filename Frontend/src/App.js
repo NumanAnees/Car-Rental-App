@@ -8,6 +8,8 @@ import Register from "./pages/Register";
 import BookingCar from "./pages/BookingCar";
 import UserBooking from "./pages/UserBooking";
 import AddCar from "./pages/AddCar";
+import EditCar from "./pages/EditCar";
+import AdminHome from "./pages/AdminHome";
 
 function App() {
   return (
@@ -70,6 +72,24 @@ function App() {
             element={
               <ProtectedRoute>
                 <AddCar />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/editcar/:carid"
+            exact
+            element={
+              <ProtectedRoute>
+                <EditCar />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/admin"
+            exact
+            element={
+              <ProtectedRoute>
+                <AdminHome />
               </ProtectedRoute>
             }
           ></Route>

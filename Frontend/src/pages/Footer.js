@@ -19,8 +19,8 @@ const Footer = () => {
             <div className="row">
               <div className="col-xl-4 col-md-4 mb-30">
                 <div className="single-cta">
-                  <PushpinOutlined className="f-icons" />
                   <div className="cta-text">
+                    <PushpinOutlined className="f-icons" />
                     <h4>Find us</h4>
                     <span>
                       Shop Number 12, Rehman plaza, wahdat road Lahore
