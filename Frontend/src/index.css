@@ -372,14 +372,14 @@ ul {
 }
 .facebook {
   color: #3b5998 !important;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.87);
 }
 .twitter {
   color: #00acee !important;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.87);
 }
 .linkedIn {
   color: #db4a39 !important;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.87);
 }
 /* -------------------------------------Booking--------------------------------- */

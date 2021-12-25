@@ -99,7 +99,9 @@ const Footer = () => {
               <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
                 <div className="footer-widget">
                   <div className="footer-widget-heading">
-                    <h3>Useful Links</h3>
+                    <h3 style={{ textAlign: " initial", marginLeft: "68px" }}>
+                      Useful Links
+                    </h3>
                   </div>
                   <ul>
                     <li>
@@ -138,7 +140,7 @@ const Footer = () => {
               <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
                 <div className="footer-widget">
                   <div className="footer-widget-heading">
-                    <h3>Subscribe</h3>
+                    <h3 style={{ textAlign: " initial" }}>Subscribe</h3>
                   </div>
                   <div className="footer-text mb-25">
                     <p>
