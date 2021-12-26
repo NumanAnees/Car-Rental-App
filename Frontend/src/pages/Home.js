@@ -86,7 +86,7 @@ function Home() {
   }
   return (
     <DefaultLayout>
-      <HeroSection></HeroSection>
+      <HeroSection />
       <Row className="mt-3" justify="center">
         <Col lg={20} sm={24} className="d-flex justify-content-left">
           <RangePicker

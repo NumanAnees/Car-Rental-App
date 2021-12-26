@@ -19,9 +19,8 @@ function UserBookings() {
     <DefaultLayout>
       {loading && <Spinner />}
       <h3
-        className="text-center mt-2"
+        className="text-center mt-4"
         style={{
-          marginTop: "5px",
           color: "#00ffffdf",
         }}
       >
