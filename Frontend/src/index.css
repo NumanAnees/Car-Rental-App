@@ -139,9 +139,14 @@ p {
 }
 /* --------------------------------------Booking page------------------------------------- */
 .carimg2 {
-  height: 400px;
-  border-radius: 10px;
-  width: auto;
+  height: 100%;
+  max-height: 100%;
+  min-height: 380px;
+  border-radius: 10px !important;
+  width: 100%;
+  max-width: 100%;
+  min-width: 358px;
+  padding-left: 15px;
 }
 /* .car-headings { */
 /* margin-left: 6.8rem !important; */
