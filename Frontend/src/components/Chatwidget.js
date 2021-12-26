@@ -18,13 +18,15 @@ const Chatwidget = () => {
     console.log(`New message incoming! ${newMessage}`);
     // Now send the message throught the backend
     if (newMessage.includes("hey")) {
-      addResponseMessage(`Hye ${user.username}, how i can help you?`);
+      addResponseMessage(`Hey ${user.username}, how i can help you?`);
     } else if (newMessage.includes("hi")) {
-      addResponseMessage(`Hye ${user.username}, how i can help you?`);
+      addResponseMessage(`Hi ${user.username}, how i can help you?`);
     } else if (newMessage.includes("hye")) {
       addResponseMessage(`Hye ${user.username}, how i can help you?`);
+    } else if (newMessage.includes("hy")) {
+      addResponseMessage(`Hy ${user.username}, how i can help you?`);
     } else if (newMessage.includes("hello")) {
-      addResponseMessage(`Hye ${user.username}, how i can help you?`);
+      addResponseMessage(`Hello ${user.username}, how i can help you?`);
     } else if (newMessage.includes("how are you")) {
       addResponseMessage(`I'm fine. What about you?`);
     } else if (newMessage.includes("marry")) {

@@ -45,7 +45,7 @@ function UserBookings() {
                         <b>{booking.car.name}</b>
                       </p>
                       <p>
-                        Total hours : <b>{booking.totalHours}</b>
+                        Total Minutes : <b>{booking.totalMins}</b>
                       </p>
                       <p>
                         Rent per hour : <b>{booking.car.rentPerHour}</b>
@@ -99,7 +99,7 @@ function UserBookings() {
                           <b>{booking.car.name}</b>
                         </p>
                         <p>
-                          Total hours : <b>{booking.totalHours}</b>
+                          Total Minutes : <b>{booking.totalMins}</b>
                         </p>
                         <p>
                           Rent per hour : <b>{booking.car.rentPerHour}</b>

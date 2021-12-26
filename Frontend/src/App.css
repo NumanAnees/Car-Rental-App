@@ -1,7 +1,12 @@
 .App {
   text-align: center;
 }
-
+* {
+  cursor: url("./crs.cur"), auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +40,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #00ffffdf);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #01bf86);
+  border-radius: 6px;
 }

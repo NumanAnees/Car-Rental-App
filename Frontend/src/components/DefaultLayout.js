@@ -49,6 +49,7 @@ function DefaultLayout(props) {
                     marginLeft: "16px",
                     marginTop: "5px",
                     color: "black",
+                    cursor: "pointer",
                   }}
                 />
                 <h1
@@ -56,6 +57,7 @@ function DefaultLayout(props) {
                     fontSize: "1.4rem",
                     marginLeft: "10px",
                     marginTop: "10px",
+                    cursor: "pointer",
                   }}
                 >
                   Sandhu Cars

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Metal&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap");
 body {
-  margin: 0;
+  margin-top: 5rem !important;
   font-family: "Metal", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,6 +22,12 @@ code {
 .box-shadow1 {
   box-shadow: rgba(28, 255, 225, 0.644) 0px 1.5px;
   background-color: #2f2e2e !important;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  top: 0;
 }
 .bs2 {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
