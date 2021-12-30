@@ -11,6 +11,7 @@ function EditCar() {
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.alertsReducer);
   const [car, setcar] = useState();
+  const user = JSON.parse(localStorage.getItem("user"));
 
   const [totalcars, settotalcars] = useState([]);
   useEffect(() => {
@@ -32,64 +33,87 @@ function EditCar() {
   return (
     <DefaultLayout>
       {loading && <Spinner />}
-      <Row justify="center mt-4">
-        <Col
-          lg={12}
-          sm={24}
-          xs={24}
-          className="p-2 mb-3"
-          style={{ backgroundColor: "#0d8585" }}
-        >
-          {totalcars.length > 0 && (
-            <Form
-              initialValues={car}
-              className="bs1 p-1"
-              layout="vertical"
-              onFinish={onFinish}
-            >
-              <h3 style={{ color: "white" }}>Edit Car</h3>
-              <hr />
-              <Form.Item
-                name="name"
-                label="Car name"
-                rules={[{ required: true }]}
+      {user.admin ? (
+        <Row justify="center mt-4">
+          <Col
+            lg={12}
+            sm={24}
+            xs={24}
+            className="p-2 mb-3"
+            style={{ backgroundColor: "#0d8585" }}
+          >
+            {totalcars.length > 0 && (
+              <Form
+                initialValues={car}
+                className="bs1 p-1"
+                layout="vertical"
+                onFinish={onFinish}
               >
-                <Input />
-              </Form.Item>
-              <Form.Item
-                name="image"
-                label="Image url"
-                rules={[{ required: true }]}
-              >
-                <Input />
-              </Form.Item>
-              <Form.Item
-                name="rentPerHour"
-                label="Rent per hour"
-                rules={[{ required: true }]}
-              >
-                <Input />
-              </Form.Item>
-              <Form.Item
-                name="capacity"
-                label="Capacity"
-                rules={[{ required: true }]}
-              >
-                <Input />
-              </Form.Item>
-              <Form.Item
-                name="fuelType"
-                label="Fuel Type"
-                rules={[{ required: true }]}
-              >
-                <Input />
-              </Form.Item>
+                <h3 style={{ color: "white" }}>Edit Car</h3>
+                <hr />
+                <Form.Item
+                  name="name"
+                  label="Car name"
+                  rules={[{ required: true }]}
+                >
+                  <Input />
+                </Form.Item>
+                <Form.Item
+                  name="image"
+                  label="Image url"
+                  rules={[{ required: true }]}
+                >
+                  <Input />
+                </Form.Item>
+                <Form.Item
+                  name="rentPerHour"
+                  label="Rent per hour"
+                  rules={[{ required: true }]}
+                >
+                  <Input />
+                </Form.Item>
+                <Form.Item
+                  name="capacity"
+                  label="Capacity"
+                  rules={[{ required: true }]}
+                >
+                  <Input />
+                </Form.Item>
+                <Form.Item
+                  name="fuelType"
+                  label="Fuel Type"
+                  rules={[{ required: true }]}
+                >
+                  <Input />
+                </Form.Item>
 
-              <button className="btn1">EDIT CAR</button>
-            </Form>
-          )}
-        </Col>
-      </Row>
+                <button className="btn1">EDIT CAR</button>
+              </Form>
+            )}
+          </Col>
+        </Row>
+      ) : (
+        <div style={{ height: "50vh" }}>
+          <h1
+            style={{
+              textAlign: "center",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: "15rem",
+            }}
+          >
+            Erorr, You are not authorize to view this page.
+          </h1>
+          <button
+            className="btn1"
+            onClick={() => {
+              window.location.href = "/";
+            }}
+          >
+            Go back
+          </button>
+        </div>
+      )}
     </DefaultLayout>
   );
 }
