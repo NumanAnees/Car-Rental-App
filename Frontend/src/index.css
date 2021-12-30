@@ -77,6 +77,8 @@ p {
   border: 1px solid #959595 !important;
   height: 35px;
   outline: none !important;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .car {

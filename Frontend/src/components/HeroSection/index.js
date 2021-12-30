@@ -46,7 +46,7 @@ const HeroSection = () => {
               window.location.href = "/userbookings";
             }}
           >
-            Get started {hover ? <ArrowForward /> : <ArrowRight />}
+            See Bookings {hover ? <ArrowForward /> : <ArrowRight />}
           </ButtonT>
         </HeroBtnWrapper>
       </HeroContent>
