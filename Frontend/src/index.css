@@ -487,7 +487,7 @@ ul {
 }
 
 .we-offer-area.text-center .item {
-  background: #faf4f4 none repeat scroll 0 0;
+  background: #ffffff none repeat scroll 0 0;
   border: medium none;
   padding: 67px 40px 64px;
 }
@@ -663,4 +663,10 @@ ul {
   position: relative;
   top: -12px;
   left: -12px;
+}
+/* ----------------------------------------- Map ------------------------------------*/
+.google-map {
+  background-color: #e0e0e0;
+  height: 34rem;
+  max-height: 100vh;
 }
