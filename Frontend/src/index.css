@@ -439,7 +439,7 @@ ul {
 }
 
 .site-heading h4::before {
-  background: #00ffffdf none repeat scroll 0 0;
+  background: #03a3a3df none repeat scroll 0 0;
   bottom: 0;
   content: "";
   height: 2px;
@@ -469,13 +469,13 @@ ul {
 }
 
 .we-offer-area .our-offer-carousel .owl-dots .owl-dot.active span {
-  background: #00ffffdf none repeat scroll 0 0;
-  border-color: #00ffffdf;
+  background: #03a3a3df none repeat scroll 0 0;
+  border-color: #03a3a3df;
 }
 
 .we-offer-area .item {
   background: #ffffff none repeat scroll 0 0;
-  border-left: 2px solid #00ffffdf;
+  border-left: 2px solid #03a3a3df;
   -moz-box-shadow: 0 0 10px #cccccc;
   -webkit-box-shadow: 0 0 10px #cccccc;
   -o-box-shadow: 0 0 10px #cccccc;
@@ -493,7 +493,7 @@ ul {
 }
 
 .we-offer-area.text-center .item i {
-  background: #00ffffdf none repeat scroll 0 0;
+  background: #03a3a3df none repeat scroll 0 0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -514,7 +514,7 @@ ul {
 }
 
 .we-offer-area.text-center .item i::after {
-  border: 2px solid #00ffffdf;
+  border: 2px solid #03a3a3df;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -552,7 +552,7 @@ ul {
 
 .our-offer-carousel.center-active .owl-item:nth-child(2n) .item,
 .we-offer-area.center-active .single-item:nth-child(2n) .item {
-  background: #00ffffdf none repeat scroll 0 0;
+  background: #03a3a3df none repeat scroll 0 0;
 }
 
 .our-offer-carousel.center-active .owl-item:nth-child(2n) .item i,
@@ -565,7 +565,7 @@ ul {
 }
 
 .we-offer-area .item i {
-  color: #00ffffdf;
+  color: #03a3a3df;
   display: inline-block;
   font-size: 60px;
   margin-bottom: 20px;
@@ -591,7 +591,7 @@ ul {
 }
 
 .we-offer-area .item::after {
-  background: #00ffffdf none repeat scroll 0 0;
+  background: #03a3a3df none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: -100%;
@@ -622,11 +622,11 @@ ul {
 
 .we-offer-area.text-center .item:hover i {
   background-color: #ffffff !important;
-  color: #00ffffdf !important;
+  color: #03a3a3df !important;
 }
 
 .we-offer-area.text-left .item i {
-  background: #00ffffdf none repeat scroll 0 0;
+  background: #03a3a3df none repeat scroll 0 0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -643,7 +643,7 @@ ul {
 }
 
 .we-offer-area.text-left .item i::after {
-  border: 2px solid #00ffffdf;
+  border: 2px solid #03a3a3df;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -653,4 +653,14 @@ ul {
   position: absolute;
   top: -10px;
   width: 120px;
+}
+.heading-service {
+  color: white;
+}
+.icon-image {
+  height: 105px;
+  width: 105px;
+  position: relative;
+  top: -12px;
+  left: -12px;
 }
