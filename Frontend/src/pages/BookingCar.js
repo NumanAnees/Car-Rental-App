@@ -32,8 +32,10 @@ function BookingCar() {
   useEffect(() => {
     if (cars.length == 0) {
       dispatch(getAllCars());
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       setcar(cars.find((o) => o._id == id));
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [cars]);
   useEffect(() => {

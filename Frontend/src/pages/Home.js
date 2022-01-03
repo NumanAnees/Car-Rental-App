@@ -8,7 +8,7 @@ import Spinner from "../components/Spinner";
 import moment from "moment";
 import Footer from "./Footer";
 import HeroSection from "../components/HeroSection";
-
+import Services from "../components/Services";
 const { RangePicker } = DatePicker;
 
 function Home() {
@@ -128,7 +128,7 @@ function Home() {
           );
         })}
       </Row>
-
+      <Services />
       <Footer />
     </DefaultLayout>
   );
