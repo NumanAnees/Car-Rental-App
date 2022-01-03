@@ -65,7 +65,7 @@ const Services = () => {
                 <i class="fas fa-tachometer-alt">
                   <img src={Collection} alt="" className="icon-image" />
                 </i>
-                <h4>Large Collection</h4>
+                <h4>Free Maintenance</h4>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
