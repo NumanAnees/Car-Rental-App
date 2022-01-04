@@ -1,6 +1,7 @@
 import React from "react";
 import mark from "../images/icons/gps.png";
 import ReactMapGL, { Marker } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 const Map = () => {
   const [viewport, setViewport] = React.useState({
     latitude: 31.5304,

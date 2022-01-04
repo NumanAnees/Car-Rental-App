@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Metal&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Metal&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap"); */
 body {
   margin-top: 4.4rem !important;
   font-family: "Metal", cursive;
@@ -8,11 +8,11 @@ body {
   background-color: #222f35 !important;
   overflow-x: hidden !important;
 }
-
+/* 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 .Spinner {
   position: absolute;
   top: 50%;
@@ -60,7 +60,7 @@ p {
   font-weight: 600;
 }
 .logo-main {
-  font-family: "Barrio";
+  font-family: "Barrio", Arial;
 }
 /* --------------------very imp-------------- */
 .content {
