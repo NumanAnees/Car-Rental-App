@@ -23,7 +23,7 @@ const Footer = () => {
                     <PushpinOutlined className="f-icons" />
                     <h4>Find us</h4>
                     <span>
-                      Shop Number 12, Rehman plaza, wahdat road Lahore
+                      Shop Number 12, Abrar Center, wahdat road Lahore
                     </span>
                   </div>
                 </div>

@@ -43,10 +43,10 @@ const HeroSection = () => {
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             onClick={() => {
-              window.location.href = "/userbookings";
+              window.scrollTo({ top: 570, behavior: "smooth" });
             }}
           >
-            See Bookings {hover ? <ArrowForward /> : <ArrowRight />}
+            Get Started {hover ? <ArrowForward /> : <ArrowRight />}
           </ButtonT>
         </HeroBtnWrapper>
       </HeroContent>

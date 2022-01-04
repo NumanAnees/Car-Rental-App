@@ -665,8 +665,6 @@ ul {
   left: -12px;
 }
 /* ----------------------------------------- Map ------------------------------------*/
-.google-map {
-  background-color: #e0e0e0;
-  height: 34rem;
-  max-height: 100vh;
+.marker:hover {
+  transform: scale(1.5);
 }
