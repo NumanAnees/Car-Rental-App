@@ -105,7 +105,7 @@ const Footer = () => {
                   </div>
                   <ul>
                     <li>
-                      <a href="#">Home</a>
+                      <a href="/">Home</a>
                     </li>
                     <li>
                       <a href="#">about</a>
@@ -117,7 +117,7 @@ const Footer = () => {
                       <a href="#">portfolio</a>
                     </li>
                     <li>
-                      <a href="#">Contact</a>
+                      <a href="/contact">Contact</a>
                     </li>
                     <li>
                       <a href="#">About us</a>
@@ -129,7 +129,7 @@ const Footer = () => {
                       <a href="#">Expert Team</a>
                     </li>
                     <li>
-                      <a href="#">Contact us</a>
+                      <a href="/contact">Contact us</a>
                     </li>
                     <li>
                       <a href="#">Latest News</a>
@@ -178,7 +178,7 @@ const Footer = () => {
                 <div className="footer-menu">
                   <ul>
                     <li>
-                      <a href="#">Home</a>
+                      <a href="/">Home</a>
                     </li>
                     <li>
                       <a href="#">Terms</a>
@@ -190,7 +190,7 @@ const Footer = () => {
                       <a href="#">Policy</a>
                     </li>
                     <li>
-                      <a href="#">Contact</a>
+                      <a href="/contact">Contact</a>
                     </li>
                   </ul>
                 </div>

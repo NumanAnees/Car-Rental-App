@@ -62,8 +62,9 @@ p {
 .logo-main {
   font-family: "Barrio";
 }
+/* --------------------very imp-------------- */
 .content {
-  min-height: 88vh;
+  /* min-height: 88vh; */
 }
 .carimg {
   height: 180px;
@@ -667,4 +668,21 @@ ul {
 /* ----------------------------------------- Map ------------------------------------*/
 .marker:hover {
   transform: scale(1.5);
+}
+/* ----------------------------------------contact form----------------------------- */
+.contact {
+  height: 70vh;
+  max-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0px;
+  margin-top: 8rem;
+}
+.form-control {
+  height: 3rem;
+}
+.message-area {
+  height: 10rem !important;
 }

@@ -10,6 +10,7 @@ import UserBooking from "./pages/UserBooking";
 import AddCar from "./pages/AddCar";
 import EditCar from "./pages/EditCar";
 import AdminHome from "./pages/AdminHome";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -22,6 +23,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <Home />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/contact"
+            exact
+            element={
+              <ProtectedRoute>
+                <Contact />
               </ProtectedRoute>
             }
           ></Route>
