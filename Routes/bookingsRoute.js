@@ -4,8 +4,8 @@ const { v4: uuidv4 } = require("uuid");
 const stripe = require("stripe")(
   "sk_test_51K8lJeSGkXsHpk6s5rnSzxHsShc9bYWdupt7krPVubHYS06G8zhZj2dyA208tSj86k3RKKsHc3meQsdohlq5V7Po004oYO8LpQ"
 );
-const Booking = require("../models/bookingModel");
-const Car = require("../models/carModel");
+const Booking = require("../Models/bookingModel");
+const Car = require("../Models/carModel");
 
 router.post("/bookcar", async (req, res) => {
   const { token } = req.body;
