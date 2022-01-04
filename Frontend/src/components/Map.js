@@ -6,11 +6,11 @@ const Map = () => {
     latitude: 31.5304,
     longitude: 74.3487,
     width: "100vw",
-    height: "60vh",
+    height: "80vh",
     zoom: 12,
   });
   return (
-    <div>
+    <div style={{ marginBottom: "2rem" }}>
       <h2
         style={{
           color: "white",

@@ -22,7 +22,7 @@ const Contact = () => {
           }
         },
         (error) => {
-          message.success("Sending failed");
+          message.error("Sending failed");
         }
       );
     e.target.reset();

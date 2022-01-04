@@ -3,12 +3,18 @@ import { Row, Col, Form, Input } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { userRegister } from "../redux/actions/userActions";
+import { message } from "antd";
+
 function Register() {
   const dispatch = useDispatch();
 
   function onFinish(values) {
-    dispatch(userRegister(values));
-    console.log(values);
+    if (values.password.length >= 8) {
+      dispatch(userRegister(values));
+      console.log(values);
+    } else {
+      message.error("Password is Weak");
+    }
   }
   return (
     <div className="login">
@@ -36,10 +42,13 @@ function Register() {
               <input type="password" />
             </Form.Item>
             <Form.Item
-              name="cpassword"
-              label="Confirm Password"
+              name="address"
+              label="Address"
               rules={[{ required: true }]}
             >
+              <input type="password" />
+            </Form.Item>
+            <Form.Item name="phone" label="Phone" rules={[{ required: true }]}>
               <input type="password" />
             </Form.Item>
             <button className="btn2 mt-2 mb-3">Register</button>
