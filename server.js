@@ -5,9 +5,6 @@ const dbConnection = require("./Db/db");
 app.use(express.json());
 
 const port = process.env.PORT || 8000;
-app.get("/", (req, res) => {
-  res.send("hello");
-});
 
 app.use("/api/cars/", require("./Routes/carsRoutes"));
 //refresh error
