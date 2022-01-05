@@ -2,10 +2,8 @@ import React from "react";
 import mark from "../images/icons/gps.png";
 import ReactMapGL, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import mapboxgl from "!mapbox-gl";
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker";
+// import mapboxgl from "!mapbox-gl";
+// import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker";
 
 mapboxgl.workerClass = MapboxWorker;
 const Map = () => {
