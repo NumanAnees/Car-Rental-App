@@ -5,7 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 // import mapboxgl from "!mapbox-gl";
 // import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker";
 
-mapboxgl.workerClass = MapboxWorker;
+// mapboxgl.workerClass = MapboxWorker;
 const Map = () => {
   const [viewport, setViewport] = React.useState({
     latitude: 31.5304,
