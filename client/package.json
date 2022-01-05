@@ -16,6 +16,7 @@
     "emailjs-com": "^3.2.0",
     "font-awesome": "^4.7.0",
     "google-map-react": "^2.1.10",
+    "mapbox-gl": "^2.6.1",
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-chat-widget": "^3.1.4",
@@ -31,7 +32,8 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.3",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "worker-loader": "^3.0.8"
   },
   "scripts": {
     "start": "react-scripts start",
