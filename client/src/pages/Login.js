@@ -22,18 +22,18 @@ function Login() {
             <h1 className="login-heading">Login</h1>
             <hr />
             <Form.Item
-              name="username"
-              label="Username"
+              name="email"
+              label="Email Address"
               rules={[{ required: true }]}
             >
-              <input />
+              <input placeholder="Enter your email address..." />
             </Form.Item>
             <Form.Item
               name="password"
               label="Password"
               rules={[{ required: true }]}
             >
-              <input type="password" />
+              <input type="password" placeholder="Enter your password..." />
             </Form.Item>
             <button className="btn2 mt-2 mb-3">Login</button>
             <br />

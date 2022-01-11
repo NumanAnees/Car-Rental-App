@@ -17,66 +17,123 @@ const Chatwidget = () => {
   const handleNewUserMessage = (newMessage) => {
     console.log(`New message incoming! ${newMessage}`);
     // Now send the message throught the backend
-    if (newMessage.includes("hey")) {
-      addResponseMessage(`Hey ${user.username}, how i can help you?`);
-    } else if (newMessage.includes("hi")) {
-      addResponseMessage(`Hi ${user.username}, how i can help you?`);
-    } else if (newMessage.includes("hye")) {
-      addResponseMessage(`Hye ${user.username}, how i can help you?`);
-    } else if (newMessage.includes("hy")) {
-      addResponseMessage(`Hy ${user.username}, how i can help you?`);
-    } else if (newMessage.includes("hello")) {
-      addResponseMessage(`Hello ${user.username}, how i can help you?`);
-    } else if (newMessage.includes("how are you")) {
+    if (
+      newMessage.includes("hi") ||
+      newMessage.includes("Hi") ||
+      newMessage.includes("hye") ||
+      newMessage.includes("Hye") ||
+      newMessage.includes("hello") ||
+      newMessage.includes("Hello") ||
+      newMessage.includes("hey") ||
+      newMessage.includes("Hey")
+    ) {
+      addResponseMessage(`Hello ${user.username}, How I can help you?`);
+    } else if (
+      newMessage.includes("how are you") ||
+      newMessage.includes("How are you")
+    ) {
       addResponseMessage(`I'm fine. What about you?`);
-    } else if (newMessage.includes("marry")) {
+    } else if (newMessage.includes("marry") || newMessage.includes("Marry")) {
       addResponseMessage(`Sorry, I'm bot`);
-    } else if (newMessage.includes("your name")) {
+    } else if (
+      newMessage.includes("your name") ||
+      newMessage.includes("Your name")
+    ) {
       addResponseMessage(`I'm marvin`);
-    } else if (newMessage.includes("my name")) {
+    } else if (
+      newMessage.includes("my name") ||
+      newMessage.includes("My name")
+    ) {
       addResponseMessage(`You are ${user.username}`);
-    } else if (newMessage.includes("age")) {
+    } else if (
+      newMessage.includes("age") ||
+      newMessage.includes("Age") ||
+      newMessage.includes("How old are you")
+    ) {
       addResponseMessage(`Don't ask it again 😠`);
-    } else if (newMessage.includes("kill")) {
+    } else if (newMessage.includes("kill") || newMessage.includes("Kill")) {
       addResponseMessage(`Please, don't use bad words 🥺`);
-    } else if (newMessage.includes("dead")) {
+    } else if (newMessage.includes("dead") || newMessage.includes("Dead")) {
       addResponseMessage(`Please, don't use bad words 🥺`);
-    } else if (newMessage.includes("destroy")) {
+    } else if (
+      newMessage.includes("destroy") ||
+      newMessage.includes("Destroy")
+    ) {
       addResponseMessage(`Please, don't use bad words 🥺`);
-    } else if (newMessage.includes("damage")) {
+    } else if (newMessage.includes("damage") || newMessage.includes("Damage")) {
       addResponseMessage(`Please, don't use bad words 🥺`);
-    } else if (newMessage.includes("how to use")) {
+    } else if (
+      newMessage.includes("how to use") ||
+      newMessage.includes("How to use")
+    ) {
       addResponseMessage(
         `Select any timeslot from the calender and we will provide you an information of available vehicles then you can simple book any of them by just clicking the book now button and paying the invoice 😄`
       );
-    } else if (newMessage.includes("address")) {
+    } else if (
+      newMessage.includes("address") ||
+      newMessage.includes("Address") ||
+      newMessage.includes("location") ||
+      newMessage.includes("Location")
+    ) {
       addResponseMessage(
         `Our address is Shop Number 12, Rehman plaza, wahdat road Lahore.`
       );
-    } else if (newMessage.includes("how to book")) {
+    } else if (
+      newMessage.includes("how to book") ||
+      newMessage.includes("How to book")
+    ) {
       addResponseMessage(
-        `Select any timeslot from the calender and we will provide you an information of available vehicles then you can simple book any of them by just clicking the book now button and paying the invoice 😄`
+        `Select any timeslot from the calender and we will provide you an information of available vehicles then you can simple book any of them by just clicking the book now button and paying the invoice.`
       );
-    } else if (newMessage.includes("how to pay")) {
-      addResponseMessage(`We accept Payments from stripe only`);
-    } else if (newMessage.includes("free")) {
-      addResponseMessage(`Free word is unknown to me`);
-    } else if (newMessage.includes("discount")) {
+    } else if (
+      newMessage.includes("how to pay") ||
+      newMessage.includes("How to pay")
+    ) {
+      addResponseMessage(`We accept Payments from stripe only.`);
+    } else if (newMessage.includes("free") || newMessage.includes("Free")) {
+      addResponseMessage(`Free word is unknown to me.`);
+    } else if (
+      newMessage.includes("discount") ||
+      newMessage.includes("Discount")
+    ) {
       addResponseMessage(`Only owner can give discount.`);
-    } else if (newMessage.includes("payment")) {
+    } else if (
+      newMessage.includes("payment") ||
+      newMessage.includes("Payment")
+    ) {
       addResponseMessage(`I have no rights to talk about this 🥺`);
-    } else if (newMessage.includes("number")) {
+    } else if (
+      newMessage.includes("number") ||
+      newMessage.includes("Number") ||
+      newMessage.includes("phone") ||
+      newMessage.includes("Phone")
+    ) {
       addResponseMessage(
         `You can send your number here or can directly contact the owner via +923310145083`
       );
-    } else if (newMessage.includes("hacker")) {
+    } else if (newMessage.includes("hacker") || newMessage.includes("Hacker")) {
       addResponseMessage(`Hahaha, Nice joke 😄`);
-    } else if (newMessage.includes("haha")) {
+    } else if (
+      newMessage.includes("haha") ||
+      newMessage.includes("hehehe") ||
+      newMessage.includes("hahaha")
+    ) {
       addResponseMessage(`Hahaha, Nice joke 😄`);
     } else if (newMessage.includes("hehe")) {
       addResponseMessage(`Hehehe, Nice joke 😄`);
-    } else if (newMessage.includes("bye")) {
+    } else if (newMessage.includes("bye") || newMessage.includes("Bye")) {
       addResponseMessage(`Bye 😄`);
+    } else if (newMessage.includes("Who made you?")) {
+      addResponseMessage(`Sorry, I don't know`);
+    } else if (newMessage.includes("What is your mother's name?")) {
+      addResponseMessage(`Sorry, I don't know`);
+    } else if (
+      newMessage.includes("Are you human") ||
+      newMessage.includes("Are you a robot") ||
+      newMessage.includes("are you robot") ||
+      newMessage.includes("Who are you")
+    ) {
+      addResponseMessage(`I'm Marvin & I'm a Bot 🤖`);
     } else {
       addResponseMessage(
         `Sorry, I'm currently learning your language. I don't know the answer. Please contact on this number +923310145083.`
@@ -89,7 +146,7 @@ const Chatwidget = () => {
         handleNewUserMessage={handleNewUserMessage}
         title="Chat with us!"
         subtitle="We typically reply in few minutes."
-        profileAvatar="https://www.kindpng.com/picc/m/347-3479906_chatbot-icon-png-transparent-png.png"
+        profileAvatar="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F347-3479906_chatbot-icon-png-transparent-png.png&imgrefurl=https%3A%2F%2Fwww.kindpng.com%2Fimgv%2FhRwJhoh_chatbot-icon-png-transparent-png%2F&tbnid=K0Ieaw1aI4Ea8M&vet=12ahUKEwj7maTo5Kn1AhUKnRoKHY_fBd8QMygIegUIARDmAQ..i&docid=N3elhP7hNXRYZM&w=860&h=932&itg=1&q=chatbot%20png&ved=2ahUKEwj7maTo5Kn1AhUKnRoKHY_fBd8QMygIegUIARDmAQ"
         // showCloseButton="true"
         emojis="true"
       />

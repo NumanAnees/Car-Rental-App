@@ -3,10 +3,10 @@ const router = express.Router();
 const User = require("../Models/userModal");
 
 router.post("/login", async (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
 
   try {
-    const user = await User.findOne({ username, password });
+    const user = await User.findOne({ email, password });
     if (user) {
       res.send(user);
     } else {
