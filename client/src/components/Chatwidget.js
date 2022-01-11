@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import chatbot from "../images/chatbot";
+import chatbot from "../images/chatbot.png";
 import { Widget, addResponseMessage } from "react-chat-widget";
 import "react-chat-widget/lib/styles.css";
 const Chatwidget = () => {
