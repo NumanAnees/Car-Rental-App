@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
+import chatbot from "../images/chatbot";
 import { Widget, addResponseMessage } from "react-chat-widget";
 import "react-chat-widget/lib/styles.css";
 const Chatwidget = () => {
   var user = JSON.parse(localStorage.getItem("user"));
   if (!user) {
     user = {
-      username: "there",
+      username: "sir",
     };
   }
 
@@ -146,7 +147,7 @@ const Chatwidget = () => {
         handleNewUserMessage={handleNewUserMessage}
         title="Chat with us!"
         subtitle="We typically reply in few minutes."
-        profileAvatar="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F347-3479906_chatbot-icon-png-transparent-png.png&imgrefurl=https%3A%2F%2Fwww.kindpng.com%2Fimgv%2FhRwJhoh_chatbot-icon-png-transparent-png%2F&tbnid=K0Ieaw1aI4Ea8M&vet=12ahUKEwj7maTo5Kn1AhUKnRoKHY_fBd8QMygIegUIARDmAQ..i&docid=N3elhP7hNXRYZM&w=860&h=932&itg=1&q=chatbot%20png&ved=2ahUKEwj7maTo5Kn1AhUKnRoKHY_fBd8QMygIegUIARDmAQ"
+        profileAvatar={chatbot}
         // showCloseButton="true"
         emojis="true"
       />

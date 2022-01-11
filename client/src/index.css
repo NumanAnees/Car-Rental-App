@@ -665,6 +665,9 @@ ul {
   left: -12px;
 }
 /* ----------------------------------------- Map ------------------------------------*/
+.marker {
+  cursor: pointer;
+}
 .marker:hover {
   transform: scale(1.5);
 }
