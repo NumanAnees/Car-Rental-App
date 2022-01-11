@@ -41,18 +41,10 @@ function AdminHome() {
         </Row>
       ) : (
         <div style={{ height: "50vh" }}>
-          <h1
-            style={{
-              textAlign: "center",
-              alignItems: "center",
-              justifyContent: "center",
-              marginTop: "15rem",
-            }}
-          >
-            Erorr, You are not authorize to view this page.
-          </h1>
+          <h1 className="errorheading">Error 404, Page not found</h1>
+
           <button
-            className="btn1"
+            className="btnerror mt-2"
             onClick={() => {
               window.location.href = "/";
             }}

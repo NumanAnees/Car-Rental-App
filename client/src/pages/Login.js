@@ -26,14 +26,21 @@ function Login() {
               label="Email Address"
               rules={[{ required: true }]}
             >
-              <input placeholder="Enter your email address..." />
+              <input
+                placeholder="Enter your email address..."
+                className="p-2"
+              />
             </Form.Item>
             <Form.Item
               name="password"
               label="Password"
               rules={[{ required: true }]}
             >
-              <input type="password" placeholder="Enter your password..." />
+              <input
+                type="password"
+                placeholder="Enter your password..."
+                className="p-2"
+              />
             </Form.Item>
             <button className="btn2 mt-2 mb-3">Login</button>
             <br />

@@ -136,7 +136,8 @@ p {
   outline: none !important;
 }
 .btn1:focus,
-.btn2:focus {
+.btn2:focus,
+.btnerror:focus {
   border: none;
 }
 /* --------------------------------------Booking page------------------------------------- */
@@ -153,6 +154,13 @@ p {
 /* .car-headings { */
 /* margin-left: 6.8rem !important; */
 /* } */
+.booking-icons {
+  margin-top: -4px;
+  font-size: 20px;
+  color: white;
+  margin-left: 4px !important;
+  margin-right: 5px;
+}
 .car-data {
   max-width: 120.69px !important;
   min-width: 120.69px !important;
@@ -687,4 +695,23 @@ ul {
 }
 .message-area {
   height: 10rem !important;
+}
+/* 
+--------------------------------------error--------------------------------------- */
+.errorheading {
+  text-align: center;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15rem;
+}
+.btnerror {
+  box-shadow: none !important;
+  background-color: white;
+  color: #1eb5a4;
+  border: 1px solid #959595 !important;
+  font-size: 1.3rem;
+  outline: none !important;
+  padding: 5px;
+  border-radius: 5px;
 }

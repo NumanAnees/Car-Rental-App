@@ -109,57 +109,25 @@ function BookingCar() {
             >
               <div style={{ margin: "4px" }} className="car-headings">
                 <p style={{ display: "flex", flexDirection: "row" }}>
-                  <span
-                    style={{
-                      marginTop: "-4px",
-                      fontSize: "20px",
-                      color: "white",
-                      marginLeft: "4px !important",
-                      marginRight: "5px",
-                    }}
-                  >
+                  <span className="booking-icons">
                     <TagsOutlined />
                   </span>
                   <span className="car-data">Model</span>
                 </p>
                 <p style={{ display: "flex", flexDirection: "row" }}>
-                  <span
-                    style={{
-                      marginTop: "-4px",
-                      fontSize: "20px",
-                      color: "white",
-                      marginLeft: "4px !important",
-                      marginRight: "5px",
-                    }}
-                  >
+                  <span className="booking-icons">
                     <DollarCircleOutlined />
                   </span>
                   <span className="car-data">Rent</span>
                 </p>
                 <p style={{ display: "flex", flexDirection: "row" }}>
-                  <span
-                    style={{
-                      marginTop: "-4px",
-                      fontSize: "20px",
-                      color: "white",
-                      marginLeft: "4px !important",
-                      marginRight: "5px",
-                    }}
-                  >
+                  <span className="booking-icons">
                     <CarOutlined />
                   </span>
                   <span className="car-data">Fuel Type</span>
                 </p>
                 <p style={{ display: "flex", flexDirection: "row" }}>
-                  <span
-                    style={{
-                      marginTop: "-4px",
-                      fontSize: "20px",
-                      color: "white",
-                      marginLeft: "4px !important",
-                      marginRight: "5px",
-                    }}
-                  >
+                  <span className="booking-icons">
                     <UsergroupAddOutlined />
                   </span>
                   <span className="car-data">Max Persons</span>
@@ -218,9 +186,6 @@ function BookingCar() {
                   <p>
                     Total Minutes : <b>{totalMins}</b>
                   </p>
-                  {/* <p>
-                  Rent Per Minute : <b>{Math.ceil(car.rentPerHour / 60)}</b>
-                </p> */}
                   <Checkbox
                     onChange={(e) => {
                       if (e.target.checked) {
