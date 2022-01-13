@@ -5,6 +5,7 @@ import { getAllBookings } from "../redux/actions/bookingActions";
 import { Col, Row } from "antd";
 import Spinner from "../components/Spinner";
 import moment from "moment";
+import defaultcar from "../images/defaultcar.jpg";
 function UserBookings() {
   const dispatch = useDispatch();
   const { bookings } = useSelector((state) => state.bookingsReducer);
@@ -40,43 +41,102 @@ function UserBookings() {
                     }}
                   >
                     <Col lg={6} sm={24}>
-                      <p>
-                        <b>{booking.car.name}</b>
-                      </p>
-                      <p>
-                        Total Minutes : <b>{booking.totalMins}</b>
-                      </p>
-                      <p>
-                        Rent per hour : <b>{booking.car.rentPerHour}</b>
-                      </p>
-                      <p>
-                        Total amount : <b>{booking.totalAmount}</b>
-                      </p>
+                      {booking.car.name ? (
+                        <p>
+                          <b>{booking.car.name}</b>
+                        </p>
+                      ) : (
+                        <p>
+                          <b>No Available</b>
+                        </p>
+                      )}
+                      {booking.car.name ? (
+                        <p>
+                          Total Minutes : <b>{booking.totalMins}</b>
+                        </p>
+                      ) : (
+                        <p>
+                          Total Minutes : <b> No available</b>
+                        </p>
+                      )}
+                      {booking.car.name ? (
+                        <p>
+                          Driver : <b>{booking.driverRequired}</b>
+                        </p>
+                      ) : (
+                        <p>
+                          Driver : <b></b>
+                        </p>
+                      )}
+                      {booking.car.name ? (
+                        <p>
+                          Total amount : <b>{booking.totalAmount}</b>
+                        </p>
+                      ) : (
+                        <p>
+                          Total amount : <b></b>
+                        </p>
+                      )}
                     </Col>
 
                     <Col lg={12} sm={24}>
-                      <p>
-                        Transaction Id : <b>{booking.transactionId}</b>
-                      </p>
-                      <p>
-                        From: <b>{booking.bookedTimeSlots.from}</b>
-                      </p>
-                      <p>
-                        To: <b>{booking.bookedTimeSlots.to}</b>
-                      </p>
-                      <p>
-                        Date of booking:{" "}
-                        <b>{moment(booking.createdAt).format("MMM DD yyyy")}</b>
-                      </p>
+                      {booking.car.name ? (
+                        <p>
+                          Transaction Id : <b>{booking.transactionId}</b>
+                        </p>
+                      ) : (
+                        <p>
+                          Transaction Id : <b></b>
+                        </p>
+                      )}
+                      {booking.car.name ? (
+                        <p>
+                          From: <b>{booking.bookedTimeSlots.from}</b>
+                        </p>
+                      ) : (
+                        <p>
+                          From: <b></b>
+                        </p>
+                      )}
+                      {booking.car.name ? (
+                        <p>
+                          To: <b>{booking.bookedTimeSlots.to}</b>
+                        </p>
+                      ) : (
+                        <p>
+                          To: <b></b>
+                        </p>
+                      )}
+                      {booking.car.name ? (
+                        <p>
+                          Date of booking:{" "}
+                          <b>
+                            {moment(booking.createdAt).format("MMM DD yyyy")}
+                          </b>
+                        </p>
+                      ) : (
+                        <p>
+                          Date of booking: <b></b>
+                        </p>
+                      )}
                     </Col>
 
                     <Col lg={6} sm={24} className="text-right">
-                      <img
-                        style={{ borderRadius: 5 }}
-                        src={booking.car.image}
-                        height="140"
-                        className="p-2"
-                      />
+                      {booking.car.name ? (
+                        <img
+                          style={{ borderRadius: 5 }}
+                          src={booking.car.image}
+                          height="140"
+                          className="p-2"
+                        />
+                      ) : (
+                        <img
+                          style={{ borderRadius: 5 }}
+                          src={defaultcar}
+                          height="140"
+                          className="p-2"
+                        />
+                      )}
                     </Col>
                   </Row>
                 );
@@ -94,45 +154,102 @@ function UserBookings() {
                       }}
                     >
                       <Col lg={6} sm={24}>
-                        <p>
-                          <b>{booking.car.name}</b>
-                        </p>
-                        <p>
-                          Total Minutes : <b>{booking.totalMins}</b>
-                        </p>
-                        <p>
-                          Rent per hour : <b>{booking.car.rentPerHour}</b>
-                        </p>
-                        <p>
-                          Total amount : <b>{booking.totalAmount}</b>
-                        </p>
+                        {booking.car.name ? (
+                          <p>
+                            <b>{booking.car.name}</b>
+                          </p>
+                        ) : (
+                          <p>
+                            <b>No Available</b>
+                          </p>
+                        )}
+                        {booking.car.name ? (
+                          <p>
+                            Total Minutes : <b>{booking.totalMins}</b>
+                          </p>
+                        ) : (
+                          <p>
+                            Total Minutes : <b> No available</b>
+                          </p>
+                        )}
+                        {booking.car.name ? (
+                          <p>
+                            Driver : <b>{booking.driverRequired}</b>
+                          </p>
+                        ) : (
+                          <p>
+                            Driver : <b></b>
+                          </p>
+                        )}
+                        {booking.car.name ? (
+                          <p>
+                            Total amount : <b>{booking.totalAmount}</b>
+                          </p>
+                        ) : (
+                          <p>
+                            Total amount : <b></b>
+                          </p>
+                        )}
                       </Col>
 
                       <Col lg={12} sm={24}>
-                        <p>
-                          Transaction Id : <b>{booking.transactionId}</b>
-                        </p>
-                        <p>
-                          From: <b>{booking.bookedTimeSlots.from}</b>
-                        </p>
-                        <p>
-                          To: <b>{booking.bookedTimeSlots.to}</b>
-                        </p>
-                        <p>
-                          Date of booking:{" "}
-                          <b>
-                            {moment(booking.createdAt).format("MMM DD yyyy")}
-                          </b>
-                        </p>
+                        {booking.car.name ? (
+                          <p>
+                            Transaction Id : <b>{booking.transactionId}</b>
+                          </p>
+                        ) : (
+                          <p>
+                            Transaction Id : <b></b>
+                          </p>
+                        )}
+                        {booking.car.name ? (
+                          <p>
+                            From: <b>{booking.bookedTimeSlots.from}</b>
+                          </p>
+                        ) : (
+                          <p>
+                            From: <b></b>
+                          </p>
+                        )}
+                        {booking.car.name ? (
+                          <p>
+                            To: <b>{booking.bookedTimeSlots.to}</b>
+                          </p>
+                        ) : (
+                          <p>
+                            To: <b></b>
+                          </p>
+                        )}
+                        {booking.car.name ? (
+                          <p>
+                            Date of booking:{" "}
+                            <b>
+                              {moment(booking.createdAt).format("MMM DD yyyy")}
+                            </b>
+                          </p>
+                        ) : (
+                          <p>
+                            Date of booking: <b></b>
+                          </p>
+                        )}
                       </Col>
 
                       <Col lg={6} sm={24} className="text-right">
-                        <img
-                          style={{ borderRadius: 5 }}
-                          src={booking.car.image}
-                          height="140"
-                          className="p-2"
-                        />
+                        {booking.car.name ? (
+                          <img
+                            style={{ borderRadius: 5 }}
+                            src={booking.car.image}
+                            height="140"
+                            className="p-2"
+                          />
+                        ) : (
+                          <img
+                            style={{ borderRadius: 5 }}
+                            src={defaultcar}
+                            height="140"
+                            className="p-2"
+                          />
+                        )}
                       </Col>
                     </Row>
                   );
