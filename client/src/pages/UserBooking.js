@@ -41,73 +41,73 @@ function UserBookings() {
                     }}
                   >
                     <Col lg={6} sm={24}>
-                      {booking.car.name ? (
+                      {booking.car ? (
                         <p>
                           <b>{booking.car.name}</b>
                         </p>
                       ) : (
                         <p>
-                          <b>No Available</b>
+                          <b>Not Available</b>
                         </p>
                       )}
-                      {booking.car.name ? (
+                      {booking.car ? (
                         <p>
                           Total Minutes : <b>{booking.totalMins}</b>
                         </p>
                       ) : (
                         <p>
-                          Total Minutes : <b> No available</b>
+                          Total Minutes : <b>Not Available</b>
                         </p>
                       )}
-                      {booking.car.name ? (
+                      {booking.car ? (
                         <p>
                           Driver : <b>{booking.driverRequired}</b>
                         </p>
                       ) : (
                         <p>
-                          Driver : <b></b>
+                          Driver : <b>Not Available</b>
                         </p>
                       )}
-                      {booking.car.name ? (
+                      {booking.car ? (
                         <p>
                           Total amount : <b>{booking.totalAmount}</b>
                         </p>
                       ) : (
                         <p>
-                          Total amount : <b></b>
+                          Total amount : <b>Not Available</b>
                         </p>
                       )}
                     </Col>
 
                     <Col lg={12} sm={24}>
-                      {booking.car.name ? (
+                      {booking.car ? (
                         <p>
                           Transaction Id : <b>{booking.transactionId}</b>
                         </p>
                       ) : (
                         <p>
-                          Transaction Id : <b></b>
+                          Transaction Id : <b>Not Available</b>
                         </p>
                       )}
-                      {booking.car.name ? (
+                      {booking.car ? (
                         <p>
                           From: <b>{booking.bookedTimeSlots.from}</b>
                         </p>
                       ) : (
                         <p>
-                          From: <b></b>
+                          From: <b>Not Available</b>
                         </p>
                       )}
-                      {booking.car.name ? (
+                      {booking.car ? (
                         <p>
                           To: <b>{booking.bookedTimeSlots.to}</b>
                         </p>
                       ) : (
                         <p>
-                          To: <b></b>
+                          To: <b>Not Available</b>
                         </p>
                       )}
-                      {booking.car.name ? (
+                      {booking.car ? (
                         <p>
                           Date of booking:{" "}
                           <b>
@@ -116,13 +116,13 @@ function UserBookings() {
                         </p>
                       ) : (
                         <p>
-                          Date of booking: <b></b>
+                          Date of booking: <b>Not Available</b>
                         </p>
                       )}
                     </Col>
 
                     <Col lg={6} sm={24} className="text-right">
-                      {booking.car.name ? (
+                      {booking.car ? (
                         <img
                           style={{ borderRadius: 5 }}
                           src={booking.car.image}
@@ -154,73 +154,73 @@ function UserBookings() {
                       }}
                     >
                       <Col lg={6} sm={24}>
-                        {booking.car.name ? (
+                        {booking.car ? (
                           <p>
                             <b>{booking.car.name}</b>
                           </p>
                         ) : (
                           <p>
-                            <b>No Available</b>
+                            <b>Not Available</b>
                           </p>
                         )}
-                        {booking.car.name ? (
+                        {booking.car ? (
                           <p>
                             Total Minutes : <b>{booking.totalMins}</b>
                           </p>
                         ) : (
                           <p>
-                            Total Minutes : <b> No available</b>
+                            Total Minutes : <b>Not Available</b>
                           </p>
                         )}
-                        {booking.car.name ? (
+                        {booking.car ? (
                           <p>
                             Driver : <b>{booking.driverRequired}</b>
                           </p>
                         ) : (
                           <p>
-                            Driver : <b></b>
+                            Driver : <b>Not Available</b>
                           </p>
                         )}
-                        {booking.car.name ? (
+                        {booking.car ? (
                           <p>
                             Total amount : <b>{booking.totalAmount}</b>
                           </p>
                         ) : (
                           <p>
-                            Total amount : <b></b>
+                            Total amount : <b>Not Available</b>
                           </p>
                         )}
                       </Col>
 
                       <Col lg={12} sm={24}>
-                        {booking.car.name ? (
+                        {booking.car ? (
                           <p>
                             Transaction Id : <b>{booking.transactionId}</b>
                           </p>
                         ) : (
                           <p>
-                            Transaction Id : <b></b>
+                            Transaction Id : <b>Not Available</b>
                           </p>
                         )}
-                        {booking.car.name ? (
+                        {booking.car ? (
                           <p>
                             From: <b>{booking.bookedTimeSlots.from}</b>
                           </p>
                         ) : (
                           <p>
-                            From: <b></b>
+                            From: <b>Not Available</b>
                           </p>
                         )}
-                        {booking.car.name ? (
+                        {booking.car ? (
                           <p>
                             To: <b>{booking.bookedTimeSlots.to}</b>
                           </p>
                         ) : (
                           <p>
-                            To: <b></b>
+                            To: <b>Not Available</b>
                           </p>
                         )}
-                        {booking.car.name ? (
+                        {booking.car ? (
                           <p>
                             Date of booking:{" "}
                             <b>
@@ -229,13 +229,13 @@ function UserBookings() {
                           </p>
                         ) : (
                           <p>
-                            Date of booking: <b></b>
+                            Date of booking: <b>Not Available</b>
                           </p>
                         )}
                       </Col>
 
                       <Col lg={6} sm={24} className="text-right">
-                        {booking.car.name ? (
+                        {booking.car ? (
                           <img
                             style={{ borderRadius: 5 }}
                             src={booking.car.image}
