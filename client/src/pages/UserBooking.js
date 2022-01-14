@@ -61,7 +61,8 @@ function UserBookings() {
                       )}
                       {booking.car ? (
                         <p>
-                          Driver : <b>{booking.driverRequired}</b>
+                          Driver :{" "}
+                          {booking.driverRequired ? <b>Yes</b> : <b>No</b>}
                         </p>
                       ) : (
                         <p>
@@ -174,7 +175,8 @@ function UserBookings() {
                         )}
                         {booking.car ? (
                           <p>
-                            Driver : <b>{booking.driverRequired}</b>
+                            Driver :
+                            {booking.driverRequired ? <b>Yes</b> : <b>No</b>}
                           </p>
                         ) : (
                           <p>
