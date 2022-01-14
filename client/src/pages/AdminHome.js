@@ -33,7 +33,7 @@ function AdminHome() {
               <h3 className="mt-1 mr-2" style={{ color: "#00ffffdf" }}>
                 Admin Panel
               </h3>
-              <button className="btn1">
+              <button className="btnAdd">
                 <a href="/addcar">ADD CAR</a>
               </button>
             </div>

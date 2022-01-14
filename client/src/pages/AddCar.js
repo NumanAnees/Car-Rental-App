@@ -36,35 +36,35 @@ function AddCar() {
                 label="Car name"
                 rules={[{ required: true }]}
               >
-                <Input />
+                <Input placeholder="Enter the car name..." />
               </Form.Item>
               <Form.Item
                 name="image"
                 label="Image url"
                 rules={[{ required: true }]}
               >
-                <Input />
+                <Input placeholder="Enter the image-url..." />
               </Form.Item>
               <Form.Item
                 name="rentPerHour"
                 label="Rent per hour"
                 rules={[{ required: true }]}
               >
-                <Input />
+                <Input placeholder="Enter the Rent Per Hour..." />
               </Form.Item>
               <Form.Item
                 name="capacity"
                 label="Capacity"
                 rules={[{ required: true }]}
               >
-                <Input />
+                <Input placeholder="Enter the capacity..." />
               </Form.Item>
               <Form.Item
                 name="fuelType"
                 label="Fuel Type"
                 rules={[{ required: true }]}
               >
-                <Input />
+                <Input placeholder="Enter the fuel type..." />
               </Form.Item>
 
               <button className="btn1">ADD CAR</button>

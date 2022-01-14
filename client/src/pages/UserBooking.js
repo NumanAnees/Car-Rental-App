@@ -50,76 +50,42 @@ function UserBookings() {
                           <b>Not Available</b>
                         </p>
                       )}
-                      {booking.car ? (
-                        <p>
-                          Total Minutes : <b>{booking.totalMins}</b>
-                        </p>
-                      ) : (
-                        <p>
-                          Total Minutes : <b>Not Available</b>
-                        </p>
-                      )}
-                      {booking.car ? (
-                        <p>
-                          Driver :{" "}
-                          {booking.driverRequired ? <b>Yes</b> : <b>No</b>}
-                        </p>
-                      ) : (
-                        <p>
-                          Driver : <b>Not Available</b>
-                        </p>
-                      )}
-                      {booking.car ? (
-                        <p>
-                          Total amount : <b>{booking.totalAmount}</b>
-                        </p>
-                      ) : (
-                        <p>
-                          Total amount : <b>Not Available</b>
-                        </p>
-                      )}
+                      <p>
+                        User : <b>{booking.user.email}</b>
+                      </p>
+                      <p>
+                        Total Minutes : <b>{booking.totalMins}</b>
+                      </p>
+                      <p>
+                        Driver :
+                        {booking.driverRequired ? (
+                          <b>Required</b>
+                        ) : (
+                          <b>Not Required</b>
+                        )}
+                      </p>
+                      <p>
+                        Total amount : <b>{booking.totalAmount}</b>
+                      </p>
                     </Col>
 
                     <Col lg={12} sm={24}>
-                      {booking.car ? (
-                        <p>
-                          Transaction Id : <b>{booking.transactionId}</b>
-                        </p>
-                      ) : (
-                        <p>
-                          Transaction Id : <b>Not Available</b>
-                        </p>
-                      )}
-                      {booking.car ? (
-                        <p>
-                          From: <b>{booking.bookedTimeSlots.from}</b>
-                        </p>
-                      ) : (
-                        <p>
-                          From: <b>Not Available</b>
-                        </p>
-                      )}
-                      {booking.car ? (
-                        <p>
-                          To: <b>{booking.bookedTimeSlots.to}</b>
-                        </p>
-                      ) : (
-                        <p>
-                          To: <b>Not Available</b>
-                        </p>
-                      )}
-                      {booking.car ? (
-                        <p>
-                          Date of booking:{" "}
-                          <b>
-                            {moment(booking.createdAt).format("MMM DD yyyy")}
-                          </b>
-                        </p>
-                      ) : (
-                        <p>
-                          Date of booking: <b>Not Available</b>
-                        </p>
-                      )}
+                      <p>
+                        Transaction Id : <b>{booking.transactionId}</b>
+                      </p>
+                      <p>
+                        User Contact : <b>{booking.user.phone}</b>
+                      </p>
+                      <p>
+                        From: <b>{booking.bookedTimeSlots.from}</b>
+                      </p>
+                      <p>
+                        To: <b>{booking.bookedTimeSlots.to}</b>
+                      </p>
+                      <p>
+                        Date of booking:{" "}
+                        <b>{moment(booking.createdAt).format("MMM DD yyyy")}</b>
+                      </p>
                     </Col>
 
                     <Col lg={6} sm={24} className="text-right">
@@ -164,76 +130,44 @@ function UserBookings() {
                             <b>Not Available</b>
                           </p>
                         )}
-                        {booking.car ? (
-                          <p>
-                            Total Minutes : <b>{booking.totalMins}</b>
-                          </p>
-                        ) : (
-                          <p>
-                            Total Minutes : <b>Not Available</b>
-                          </p>
-                        )}
-                        {booking.car ? (
-                          <p>
-                            Driver :
-                            {booking.driverRequired ? <b>Yes</b> : <b>No</b>}
-                          </p>
-                        ) : (
-                          <p>
-                            Driver : <b>Not Available</b>
-                          </p>
-                        )}
-                        {booking.car ? (
-                          <p>
-                            Total amount : <b>{booking.totalAmount}</b>
-                          </p>
-                        ) : (
-                          <p>
-                            Total amount : <b>Not Available</b>
-                          </p>
-                        )}
+                        <p>
+                          User : <b>{booking.user.email}</b>
+                        </p>
+                        <p>
+                          Total Minutes : <b>{booking.totalMins}</b>
+                        </p>
+                        <p>
+                          Driver :
+                          {booking.driverRequired ? (
+                            <b>Required</b>
+                          ) : (
+                            <b>Not Required</b>
+                          )}
+                        </p>
+                        <p>
+                          Total amount : <b>{booking.totalAmount}</b>
+                        </p>
                       </Col>
 
                       <Col lg={12} sm={24}>
-                        {booking.car ? (
-                          <p>
-                            Transaction Id : <b>{booking.transactionId}</b>
-                          </p>
-                        ) : (
-                          <p>
-                            Transaction Id : <b>Not Available</b>
-                          </p>
-                        )}
-                        {booking.car ? (
-                          <p>
-                            From: <b>{booking.bookedTimeSlots.from}</b>
-                          </p>
-                        ) : (
-                          <p>
-                            From: <b>Not Available</b>
-                          </p>
-                        )}
-                        {booking.car ? (
-                          <p>
-                            To: <b>{booking.bookedTimeSlots.to}</b>
-                          </p>
-                        ) : (
-                          <p>
-                            To: <b>Not Available</b>
-                          </p>
-                        )}
-                        {booking.car ? (
-                          <p>
-                            Date of booking:{" "}
-                            <b>
-                              {moment(booking.createdAt).format("MMM DD yyyy")}
-                            </b>
-                          </p>
-                        ) : (
-                          <p>
-                            Date of booking: <b>Not Available</b>
-                          </p>
-                        )}
+                        <p>
+                          Transaction Id : <b>{booking.transactionId}</b>
+                        </p>
+                        <p>
+                          User Contact : <b>{booking.user.phone}</b>
+                        </p>
+                        <p>
+                          From: <b>{booking.bookedTimeSlots.from}</b>
+                        </p>
+                        <p>
+                          To: <b>{booking.bookedTimeSlots.to}</b>
+                        </p>
+                        <p>
+                          Date of booking:{" "}
+                          <b>
+                            {moment(booking.createdAt).format("MMM DD yyyy")}
+                          </b>
+                        </p>
                       </Col>
 
                       <Col lg={6} sm={24} className="text-right">
