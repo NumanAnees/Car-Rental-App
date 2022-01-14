@@ -59,9 +59,9 @@ function UserBookings() {
                       <p>
                         Driver :
                         {booking.driverRequired ? (
-                          <b>Required</b>
+                          <b> Required</b>
                         ) : (
-                          <b>Not Required</b>
+                          <b> Not Required</b>
                         )}
                       </p>
                       <p>
@@ -139,9 +139,9 @@ function UserBookings() {
                         <p>
                           Driver :
                           {booking.driverRequired ? (
-                            <b>Required</b>
+                            <b> Required</b>
                           ) : (
-                            <b>Not Required</b>
+                            <b> Not Required</b>
                           )}
                         </p>
                         <p>

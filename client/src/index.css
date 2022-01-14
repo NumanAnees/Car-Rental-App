@@ -721,7 +721,7 @@ ul {
   font-size: 17px;
   border-radius: 5px;
   background-color: #1eb5a4;
-  color: white;
+  color: white !important;
   font-weight: 600;
 }
 .btnAdd:hover {

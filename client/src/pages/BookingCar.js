@@ -203,6 +203,7 @@ function BookingCar() {
                   <StripeCheckout
                     token={onToken}
                     shippingAddress
+                    billingAddress={true}
                     currency="pkr"
                     amount={totalAmount * 100}
                     stripeKey="pk_test_51K8lJeSGkXsHpk6s64EtVo37lQmikIps217LhE2fmpwRMj2Ro0iKQvYXcFkMBHjjM4Z6BC5uvxV8XsTbKQFfbQ5y000eSg9RUb"
