@@ -49,7 +49,7 @@ router.post("/bookcar", async (req, res) => {
 
 router.get("/getallbookings", async (req, res) => {
   try {
-    const bookings = await Booking.find().populate("car");
+    const bookings = await Booking.find().populate("car").populate("user");
     res.send(bookings);
   } catch (error) {
     return res.status(400).json(error);
