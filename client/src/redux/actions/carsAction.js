@@ -35,7 +35,7 @@ export const editCar = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post("api/cars/editcar", reqObj);
+    await axios.put("api/cars/editcar", reqObj);
 
     dispatch({ type: "LOADING", payload: false });
     message.success("Car details updated successfully");
@@ -52,7 +52,7 @@ export const deleteCar = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post("api/cars/deletecar", reqObj);
+    await axios.delete("api/cars/deletecar", reqObj);
 
     dispatch({ type: "LOADING", payload: false });
     message.success("Car deleted successfully");
