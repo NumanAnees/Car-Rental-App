@@ -109,7 +109,7 @@ function UserBookings() {
                 );
               })
             : bookings
-                .filter((o) => o.user == user._id)
+                .filter((o) => o.user._id == user._id)
                 .map((booking) => {
                   return (
                     <Row
