@@ -35,7 +35,7 @@ exports.editCar = async (req, res) => {
 };
 exports.deleteCar = async (req, res) => {
   try {
-    await Car.findOneAndDelete({ _id: req.body.carid });
+    await Car.findByIdAndRemove({ _id: req.body.carid });
 
     res.send("Car deleted successfully");
   } catch (error) {
