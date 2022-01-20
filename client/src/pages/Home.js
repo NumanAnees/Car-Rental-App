@@ -92,8 +92,10 @@ function Home() {
     <DefaultLayout>
       <HeroSection />
       <Row className="mt-3" justify="center">
+        <h1 style={{ display: "flex", justifyContent: "center" }}>
+          Please Choose a time slot 🚗
+        </h1>
         <Col lg={20} sm={24} className="d-flex justify-content-center">
-          <h1>Please Choose a time slot 🚗</h1>
           <RangePicker
             className="RangePicker"
             showTime={{ format: "HH:mm a" }}
