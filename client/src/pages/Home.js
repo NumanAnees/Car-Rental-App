@@ -16,6 +16,8 @@ function Home() {
   const { cars } = useSelector((state) => state.carsReducer);
   const { loading } = useSelector((state) => state.alertsReducer);
   const [totalCars, setTotalcars] = useState([]);
+  const [from, setFrom] = useState();
+  const [to, setTo] = useState();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllCars());
@@ -28,7 +30,8 @@ function Home() {
       if (values.length > 1) {
         // var selectedFrom = moment(values[0], "MMM DD yyyy HH:mm");
         // var selectedTo = moment(values[1], "MMM DD yyyy HH:mm");
-
+        setFrom(moment(values[0]).format("MMM DD yyyy HH"));
+        setTo(moment(values[1]).format("MMM DD yyyy HH"));
         var selectedFrom = moment(new Date(values[0]._d)).format(
           "MMM DD yyyy HH:mm"
         );
