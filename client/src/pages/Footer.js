@@ -1,5 +1,5 @@
 import React from "react";
-import img from "./logo.png";
+import img from "../images/logo.png";
 import {
   PushpinOutlined,
   PhoneOutlined,

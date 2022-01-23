@@ -52,7 +52,7 @@ export const deleteCar = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.delete("api/cars/deletecar", reqObj);
+    await axios.post("api/cars/deletecar", reqObj);
 
     dispatch({ type: "LOADING", payload: false });
     message.success("Car deleted successfully");

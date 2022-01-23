@@ -725,3 +725,10 @@ ul {
   background-color: white;
   font-weight: 600;
 }
+.Main-heading-home{
+  display: flex;
+  justify-content: center;
+  font-size: 44px !important;
+  font-weight: 500 !important;
+  margin-left: 2rem;
+}

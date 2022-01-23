@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, Dropdown, Button, Space } from "antd";
-import Logoo from "../pages/logo.png";
+import Logoo from "../images/logo.png";
 import { Link } from "react-router-dom";
 function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
