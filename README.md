@@ -37,3 +37,14 @@
 | 7.      |  styled-components   |  5.3.3  |
 | 8.      |   uuid       |  8.3.2  |
 | 9.      |   react-redux       |  7.2.6 |
+
+
+
+### [User Panel Demo](https://www.youtube.com/watch?v=l4MMxoHn__8) (click to open the video)
+[![user demo](https://img.youtube.com/vi/l4MMxoHn__8/sddefault.jpg)](https://www.youtube.com/watch?v=l4MMxoHn__8)
+
+
+### [Admin Panel Demo](https://www.youtube.com/watch?v=2JC6r0FfGdo) (click to open the video)
+[![admin demo](https://img.youtube.com/vi/2JC6r0FfGdo/sddefault.jpg)](https://www.youtube.com/watch?v=2JC6r0FfGdo)
+
+
