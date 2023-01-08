@@ -7,6 +7,9 @@ app.use(express.json());
 const port = process.env.PORT || 8000;
 
 app.use("/api/cars/", require("./Routes/carsRoutes"));
+app.get("/hello", (req, res) => {
+  res.send("Hello!");
+});
 //refresh error
 app.use("/booking/api/cars/", require("./Routes/carsRoutes"));
 app.use("/editcar/api/cars/", require("./Routes/carsRoutes"));
